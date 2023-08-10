@@ -176,8 +176,15 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    /* font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive; */
+    font-family: 'Nova Round', cursive;
     color: #{{ site.data.template.color.primary }};
+}
+
+.navbar-brand img {
+    width: 1.5em; 
+    height: auto; 
+    margin-right: 10px; 
 }
 
 .navbar-default .navbar-brand:hover,
@@ -208,7 +215,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .nav li a {
     text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
-    font-weight: 400;
+    font-weight: 800;
     letter-spacing: 1px;
     color: #fff;
     -webkit-transition: all ease .35s;
@@ -269,7 +276,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+    background-image: url('{{ site.baseurl }}/img/header-bg-2.png');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;

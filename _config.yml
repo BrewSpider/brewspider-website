@@ -1,10 +1,10 @@
-url: https://y7kim.github.io
-baseurl: /agency-jekyll-theme/
+url: https://brewspider.com
+baseurl: ""
 
 # Site settings
-title: Awesome Title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: BrewSpider
+email: contact@brewspider.com
+description: "Welcome to BrewSpider: Elevate Your Brewing Experience! Discover the future of beer making with our cutting-edge brewery controller startup. Revolutionize your fermentation process with precision temperature and pressure control at your fingertips, all effortlessly managed through a sleek and intuitive phone app. Seamlessly integrate with iSpindel to harness real-time data, and easily share your brewing journey by posting updates to the Brewfather app. Unleash the power of automation, innovation, and connectivity with BrewSpider. Perfect beer, every brew."
 
 
 # Team names, titles and social links

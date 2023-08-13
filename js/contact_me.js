@@ -7,11 +7,12 @@ $(function() {
     },
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
+      
       // get values from FORM
+      var myForm = $form[0]; // Get the native form element
+      var formData = new FormData(myForm);
+
       var name = $("input#name").val();
-      var email = $("input#email").val();
-      var phone = $("input#phone").val();
-      var message = $("textarea#message").val();
       var firstName = name; // For Success/Failure Message
       // Check for white space in name for Success/Fail message
       if (firstName.indexOf(' ') >= 0) {
@@ -21,14 +22,9 @@ $(function() {
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
         url: "/",
-        type: "POST",
-	      dataType: "json",
-        data: {
-          name: name,
-          phone: phone,
-          email: email,
-          message: message
-        },
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        data: new URLSearchParams(formData).toString(),
         cache: false,
 
 		success: function() {

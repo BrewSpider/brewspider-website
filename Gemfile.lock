@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    jekyll-agency (1.1.0)
+      jekyll (>= 4.0, < 4.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -66,7 +72,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  jekyll
+  bundler (~> 2.0)
+  jekyll-agency!
+  rake (~> 13.0)
 
 BUNDLED WITH
    2.4.18

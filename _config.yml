@@ -1,65 +1,38 @@
-url: https://brewspider.com
-baseurl: ""
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that.
+# This file is *NOT* reloaded automatically when you use 'bundle exec jekyll serve'.
+# If you change this file, please restart the server process.
 
 # Site settings
-title: BrewSpider
-email: contact@brewspider.com
-description: "Welcome to BrewSpider: Elevate Your Brewing Experience! Discover the future of beer making with our cutting-edge brewery controller startup. Revolutionize your fermentation process with precision temperature and pressure control at your fingertips, all effortlessly managed through a sleek and intuitive phone app. Seamlessly integrate with iSpindel to harness real-time data, and easily share your brewing journey by posting updates to the Brewfather app. Unleash the power of automation, innovation, and connectivity with BrewSpider. Perfect beer, every brew."
+# are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 
+theme: jekyll-agency
 
-# Team names, titles and social links
-people:
-- name: Kay Garland
-  pic: 1
-  position: Lead Designer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
+url    : "https://brewspider.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 
-- name: Larry Parker
-  pic: 2
-  position: Lead Marketer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: linkedin
-      url: #
+title      : BrewSpider
+email      : alghazu@gmail.com  #this is also the email contact forms will go to
+description: "Site description"
+author     : Nader
+logo:     #optional, defaults to site title
+  path: assets/img/logo/logo.svg
+  # height: 60 #height in px, defaults to 52px
 
-- name: Diana Petersen
-  pic: 3
-  position: Lead Developer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+locale: "en-US" # See available languages in _data/sitetext.yml
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: http://github.com/jekyll
+analytics:
+  google: #Google Analytics tracking code here
 
-# Postal address (add as many lines as necessary)
-address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+collections:
+  portfolio:
 
-# Build settings
 markdown: kramdown
-permalink: pretty
+
+# Uncomment one of the following line to use Formspree, otherwise Netlify forms
+# formspree_form_path: "https://formspree.io/f/xjvqyeev" 

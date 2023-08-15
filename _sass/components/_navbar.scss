@@ -13,19 +13,23 @@
   }
   .navbar-brand {
     color: $primary;
-    @include script-font;
+    // @include script-font;
+    font-family: 'Nova Round', cursive;
     &.active,
     &:active,
     &:focus,
     &:hover {
       color: darken($primary, 10%);
     }
+    img {
+      margin-right: 10px; 
+    }
   }
   .navbar-nav {
     .nav-item {
       .nav-link {
         font-size: 90%;
-        font-weight: 400;
+        font-weight: bold;
         padding: 0.75em 0;
         letter-spacing: 1px;
         color: white;

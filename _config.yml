@@ -22,7 +22,7 @@ description: "Site description"
 author     : Nader
 logo:     #optional, defaults to site title
   path: assets/img/logo/logo.svg
-  # height: 60 #height in px, defaults to 52px
+  height: 40 #height in px, defaults to 52px
 
 locale: "en-US" # See available languages in _data/sitetext.yml
 

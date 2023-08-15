@@ -21,18 +21,24 @@ en: &DEFAULT_EN
     text: "Step into the future of fermentation control"
     section: features
     list:
+      - title: "Temperature Control"
+        desc: "Regulate your brew's temperature using both heating and cooling elements, ensuring your fermentation environment remains steady and ideal for optimal yeast activity"
+        icon: fas fa-temperature-high #find more at https://fontawesome.com/icons
       - title: "Pressure Control"
         desc: "Elevate your brew with our pressure control feature. Achieve your desired carbonation levels by easily setting and adjusting pressure, giving you full control over your fermentation process."
         icon: fas fa-gauge-high
       - title: "Control from Anywhere"
         desc: "Whether you're at the brewery, on the couch, or even on the go, you can easily monitor and adjust fermentation settings with a few taps on your phone."
-        icon: fas fa-gamepad #find more at https://fontawesome.com/icons
+        icon: fas fa-gamepad 
       - title: "Connects to iSpindel"
         desc: "It seamlessly integrates with the **iSpindel**, a wireless hydrometer and temperature sensor, allowing you to gather accurate data on your fermentation progress."
         icon: fas fa-vial
       - title: "Connect to BrewFather"
         desc: "Display your data on the **Brewfather** app, you can effortlessly post your data and track your brewing journey all in one place (including **iSpindel** data)."
         icon: fas fa-beer-mug-empty
+      - title: "???"
+        desc: "Display your data on the **Brewfather** app, you can effortlessly post your data and track your brewing journey all in one place (including **iSpindel** data)."
+        icon: fas fa-question
 
   portfolio:
     title: "Portfolio"

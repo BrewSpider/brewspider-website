@@ -1,3 +1,4 @@
+# Built site
 _site
 
 # Windows image file caches
@@ -22,13 +23,13 @@ $RECYCLE.BIN/
 
 # OSX
 # =========================
-
 .DS_Store
 .AppleDouble
 .LSOverride
 
 # Icon must ends with two \r.
 Icon
+
 # Thumbnails
 ._*
 

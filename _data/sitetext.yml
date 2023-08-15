@@ -14,20 +14,20 @@ en: &DEFAULT_EN
     title: Precision Brewing Simplified
     text: Click. Brew. Cheers!
     button: Learn More
-    buttonlink: "#services"
+    buttonlink: "#features"
 
-  services:
+  features:
     title: "Features"
     text: "Lorem ipsum"
-    section: services
+    section: features
     list:
-      - title: "E-Commerce"
+      - title: "Control from APP"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Responsive Design"
+      - title: "Connects to iSpindel"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
         icon: fas fa-laptop
-      - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
+      - title: "Connect to BrewFather"
         desc: "Your description here, full **Markdown** support"
         icon: fab fa-markdown
 

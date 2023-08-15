@@ -22,7 +22,7 @@ en: &DEFAULT_EN
     section: features
     list:
       - title: "Pressure Control"
-        desc: "Display your data on the **Brewfather** app, you can effortlessly post your data and track your brewing journey all in one place (including **iSpindel** data)."
+        desc: "Elevate your brew with our pressure control feature. Achieve your desired carbonation levels by easily setting and adjusting pressure, giving you full control over your fermentation process."
         icon: fas fa-gauge-high
       - title: "Control from Anywhere"
         desc: "Whether you're at the brewery, on the couch, or even on the go, you can easily monitor and adjust fermentation settings with a few taps on your phone."
@@ -41,7 +41,7 @@ en: &DEFAULT_EN
     closebutton: "Close Project"
 
   timeline:
-    title: "Timeline"
+    title: "How it works"
     text: "Lorem ipsum timeline"
     section: timeline
     # left is the default
@@ -80,7 +80,7 @@ en: &DEFAULT_EN
   clients:
     section: clients
     max-height: 100px
-    horizontal-scrolling: "" #"yes/no"
+    horizontal-scrolling: "yes" #"yes/no"
     list:
       - title: "envato"
         url: https://github.com/raviriley/agency-jekyll-theme
@@ -96,7 +96,7 @@ en: &DEFAULT_EN
         logo: assets/img/clients/creative-market.jpg
 
   team:
-    title: "OUR TEAM"
+    title: "Our Team"
     text: "A diverse team of brewing enthusiasts and tech innovators is united by a shared passion for perfecting the art of fermentation"
     subtext: Our dynamic duo forms the heart of BrewSpider, fusing technical expertise and brewing wisdom to drive the future of fermentation control.
     section: team
@@ -124,7 +124,7 @@ en: &DEFAULT_EN
 
   contact:
     title: "Contact Us"
-    text: "We're just an email or call away, don't hesitate to contact us"
+    text: "We're just an email away, don't hesitate to contact us"
     section: contact
     name: "Name*"
     name-validation: "Please enter your name."
@@ -146,8 +146,6 @@ en: &DEFAULT_EN
         icon: "fab fa-facebook-f"
       - url: https://linkedin.com
         icon: "fab fa-linkedin-in"
-      - url: https://github.com/raviriley/agency-jekyll-theme
-        icon: "fab fa-github"
       - url: https://instagram.com
         icon: "fab fa-instagram"
 en-US:

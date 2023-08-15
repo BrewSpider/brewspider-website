@@ -13,7 +13,7 @@ en: &DEFAULT_EN
   nav:
     - title: "Features"
       section: features
-    - title: "Timeline"
+    - title: "How it Works"
       section: timeline
     - title: "About"
       section: about

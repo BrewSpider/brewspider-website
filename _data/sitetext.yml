@@ -18,17 +18,20 @@ en: &DEFAULT_EN
 
   features:
     title: "Features"
-    text: "Lorem ipsum"
+    text: "Step into the future of fermentation control"
     section: features
     list:
+      - title: "Pressure Control"
+        desc: "Display your data on the **Brewfather** app, you can effortlessly post your data and track your brewing journey all in one place (including **iSpindel** data)."
+        icon: fas fa-gauge-high
       - title: "Control from Anywhere"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+        desc: "Whether you're at the brewery, on the couch, or even on the go, you can easily monitor and adjust fermentation settings with a few taps on your phone."
         icon: fas fa-gamepad #find more at https://fontawesome.com/icons
       - title: "Connects to iSpindel"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+        desc: "It seamlessly integrates with the **iSpindel**, a wireless hydrometer and temperature sensor, allowing you to gather accurate data on your fermentation progress."
         icon: fas fa-vial
       - title: "Connect to BrewFather"
-        desc: "Your description here, full **Markdown** support"
+        desc: "Display your data on the **Brewfather** app, you can effortlessly post your data and track your brewing journey all in one place (including **iSpindel** data)."
         icon: fas fa-beer-mug-empty
 
   portfolio:
@@ -70,7 +73,7 @@ en: &DEFAULT_EN
 
   about:
     title: "About Us"
-    text: "our story"
+    text: "Our story"
     body: "At BrewSpider, we're passionate about great beer and innovative technology. Our startup is dedicated to revolutionizing the way homebrewers and small breweries approach the fermentation process. We've developed a cutting-edge device, also known as the BrewSpider, that empowers brewers with precision control over temperature and pressure during fermentation. With our user-friendly phone app, you can now manage your brewing process with ease, ensuring consistent and exceptional results every time."
     section: about
 
@@ -94,8 +97,8 @@ en: &DEFAULT_EN
 
   team:
     title: "OUR TEAM"
-    text: "A diverse team of brewing enthusiasts and tech innovators is united by a shared passion for perfecting the art of fermentation."
-    subtext: our dynamic duo forms the heart of BrewSpider, fusing technical expertise and brewing wisdom to drive the future of fermentation control.
+    text: "A diverse team of brewing enthusiasts and tech innovators is united by a shared passion for perfecting the art of fermentation"
+    subtext: Our dynamic duo forms the heart of BrewSpider, fusing technical expertise and brewing wisdom to drive the future of fermentation control.
     section: team
     people:
       - name: "Nader A."
@@ -121,7 +124,7 @@ en: &DEFAULT_EN
 
   contact:
     title: "Contact Us"
-    text: "We're just an email or call away – don't hesitate to contact us."
+    text: "We're just an email or call away, don't hesitate to contact us"
     section: contact
     name: "Name*"
     name-validation: "Please enter your name."

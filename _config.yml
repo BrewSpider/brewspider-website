@@ -17,7 +17,7 @@ url    : "https://brewspider.com" # the base hostname & protocol for your site, 
 baseurl: "" # the subpath of your site, e.g. /blog
 
 title      : BrewSpider
-email      : alghazu@gmail.com  #this is also the email contact forms will go to
+email      : contact@brewspider.com  #this is also the email contact forms will go to
 description: "Site description"
 author     : Nader
 logo:     #optional, defaults to site title

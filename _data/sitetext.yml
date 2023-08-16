@@ -30,7 +30,7 @@ en: &DEFAULT_EN
       - title: "Control from Anywhere"
         desc: "Whether you're at the brewery, on the couch, or even on the go, you can easily monitor and adjust fermentation settings with a few taps on your phone."
         icon: fas fa-gamepad 
-      - title: "Connects to [**iSpindel**](https://ispindel.de)"
+      - title: "Connects to [***iSpindel***](https://ispindel.de)"
         desc: "It seamlessly integrates with the [**iSpindel**](https://ispindel.de), a wireless hydrometer and temperature sensor, allowing you to gather accurate data on your fermentation progress."
         icon: fas fa-vial
       - title: "Connect to <a target='_blank' href='https://brewfather.app/?via=494298'><img src= 'assets/img/clients/brewfather.png' height='35px;'></a>"
@@ -38,7 +38,7 @@ en: &DEFAULT_EN
         icon: fas fa-beer-mug-empty
       - title: "???"
         desc: "Display your data on the **Brewfather** app, you can effortlessly post your data and track your brewing journey all in one place (including **iSpindel** data)."
-        icon: fas fa-question
+        icon: fas fa-cpu
 
   portfolio:
     title: "Portfolio"

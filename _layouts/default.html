@@ -22,6 +22,9 @@
 
 	  <!-- Custom scripts for this template -->
 	  <script src="assets/js/agency.min.js"></script>
+	  {% if site.data.sitetext[site.locale].clients.horizontal-scrolling == "yes" %} 
+	  <script src="assets/js/clients.js"></script>
+	  {% endif %}
 
   </body>
 </html>

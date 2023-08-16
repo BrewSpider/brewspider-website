@@ -2,10 +2,9 @@
 #scrolling-clients {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
-#col-md-3 col-sm-6 {
+.col-md-3.col-sm-6 {
   flex: 0 0 auto;
 }

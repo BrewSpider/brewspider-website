@@ -18,19 +18,28 @@ en: &DEFAULT_EN
 
   features:
     title: "Features"
-    text: "Lorem ipsum"
+    text: "Step into the future of fermentation control"
     section: features
     list:
-      - title: "Control from APP"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Connects to iSpindel"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-laptop
-      - title: "Connect to BrewFather"
-        desc: "Your description here, full **Markdown** support"
-        icon: fab fa-markdown
-
+      - title: "Temperature Control"
+        desc: "Regulate your brew's temperature using both heating and cooling elements, ensuring your fermentation environment remains steady and ideal for optimal yeast activity"
+        icon: fas fa-temperature-high #find more at https://fontawesome.com/icons
+      - title: "Pressure Control"
+        desc: "Elevate your brew with our pressure control feature. Achieve your desired carbonation levels by easily setting and adjusting pressure, giving you full control over your fermentation process."
+        icon: fas fa-gauge-high
+      - title: "Control from Anywhere"
+        desc: "Whether you're at the brewery, on the couch, or even on the go, you can easily monitor and adjust fermentation settings with a few taps on your phone."
+        icon: fas fa-gamepad 
+      - title: "Connects to [***iSpindel***](https://ispindel.de)"
+        desc: "It seamlessly integrates with the [**iSpindel**](https://ispindel.de), a wireless hydrometer and temperature sensor, allowing you to gather accurate data on your fermentation progress."
+        icon: fas fa-vial
+      - title: "Connect to <a target='_blank' href='https://brewfather.app/?via=494298'><img src= 'assets/img/clients/brewfather.png' height='35px;'></a>"
+        desc: "Display your data on the [**Brewfather**](https://brewfather.app/?via=494298) app, you can effortlessly post your data and track your brewing journey all in one place (including [**iSpindel**](https://ispindel.de) data)."
+        icon: fas fa-beer-mug-empty
+      - title: "User-Friendly Interface"
+        desc: "Fermentation controls are at your fingertips. Our intuitive interface simplifies the brewing process, allowing you to focus on what matters most: crafting exceptional beer."
+        icon: fas fa-circle-play
+    
   portfolio:
     title: "Portfolio"
     text: "Lorem ipsum dolor sit amet consectetur."
@@ -38,7 +47,7 @@ en: &DEFAULT_EN
     closebutton: "Close Project"
 
   timeline:
-    title: "Timeline"
+    title: "How it works"
     text: "Lorem ipsum timeline"
     section: timeline
     # left is the default
@@ -70,32 +79,14 @@ en: &DEFAULT_EN
 
   about:
     title: "About Us"
-    text: "our story"
+    text: "Our story"
     body: "At BrewSpider, we're passionate about great beer and innovative technology. Our startup is dedicated to revolutionizing the way homebrewers and small breweries approach the fermentation process. We've developed a cutting-edge device, also known as the BrewSpider, that empowers brewers with precision control over temperature and pressure during fermentation. With our user-friendly phone app, you can now manage your brewing process with ease, ensuring consistent and exceptional results every time."
     section: about
 
-  clients:
-    section: clients
-    max-height: 100px
-    horizontal-scrolling: "" #"yes/no"
-    list:
-      - title: "envato"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/envato.jpg
-      - title: "designmodo"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/designmodo.jpg
-      - title: "themeforest"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/themeforest.jpg
-      - title: "Creative Market"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/creative-market.jpg
-
   team:
-    title: "OUR TEAM"
-    text: "A diverse team of brewing enthusiasts and tech innovators is united by a shared passion for perfecting the art of fermentation."
-    subtext: our dynamic duo forms the heart of BrewSpider, fusing technical expertise and brewing wisdom to drive the future of fermentation control.
+    title: "Our Team"
+    text: "A diverse team of brewing enthusiasts and tech innovators is united by a shared passion for perfecting the art of fermentation"
+    subtext: Our dynamic duo forms the heart of BrewSpider, fusing technical expertise and brewing wisdom to drive the future of fermentation control.
     section: team
     people:
       - name: "Nader A."
@@ -121,7 +112,7 @@ en: &DEFAULT_EN
 
   contact:
     title: "Contact Us"
-    text: "We're just an email or call away – don't hesitate to contact us."
+    text: "We're just an email away, don't hesitate to contact us"
     section: contact
     name: "Name*"
     name-validation: "Please enter your name."
@@ -134,6 +125,25 @@ en: &DEFAULT_EN
     subject: "Contact Form Submission"
     submit: "Send Message"
 
+  clients:
+    section: clients
+    max-height: 100px
+    horizontal-scrolling: "yes" #"yes/no"
+    list:
+      - title: "BrewFather"
+        url: https://brewfather.app/?via=494298
+        logo: assets/img/clients/brewfather.png  
+      - title: "designmodo"
+        url: https://github.com/raviriley/agency-jekyll-theme
+        logo: assets/img/clients/designmodo.jpg
+      - title: "themeforest"
+        url: https://github.com/raviriley/agency-jekyll-theme
+        logo: assets/img/clients/themeforest.jpg
+      - title: "Creative Market"
+        url: https://github.com/raviriley/agency-jekyll-theme
+        logo: assets/img/clients/creative-market.jpg
+
+
   footer:
     legal: "Privacy Policy"
     social:
@@ -143,8 +153,6 @@ en: &DEFAULT_EN
         icon: "fab fa-facebook-f"
       - url: https://linkedin.com
         icon: "fab fa-linkedin-in"
-      - url: https://github.com/raviriley/agency-jekyll-theme
-        icon: "fab fa-github"
       - url: https://instagram.com
         icon: "fab fa-instagram"
 en-US:

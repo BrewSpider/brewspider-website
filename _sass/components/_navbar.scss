@@ -17,7 +17,6 @@
     font-family: 'Nova Round', cursive;
     &.active,
     &:active,
-    &:focus,
     &:hover {
       color: darken($primary, 10%);
     }

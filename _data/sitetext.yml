@@ -30,11 +30,11 @@ en: &DEFAULT_EN
       - title: "Control from Anywhere"
         desc: "Whether you're at the brewery, on the couch, or even on the go, you can easily monitor and adjust fermentation settings with a few taps on your phone."
         icon: fas fa-gamepad 
-      - title: "Connects to iSpindel"
-        desc: "It seamlessly integrates with the **iSpindel**, a wireless hydrometer and temperature sensor, allowing you to gather accurate data on your fermentation progress."
+      - title: "Connects to [**iSpindel**](https://ispindel.de)"
+        desc: "It seamlessly integrates with the [**iSpindel**](https://ispindel.de), a wireless hydrometer and temperature sensor, allowing you to gather accurate data on your fermentation progress."
         icon: fas fa-vial
-      - title: "Connect to BrewFather"
-        desc: "Display your data on the **Brewfather** app, you can effortlessly post your data and track your brewing journey all in one place (including **iSpindel** data)."
+      - title: "Connect to <a target='_blank' href='https://brewfather.app/?via=494298'><img src= 'assets/img/clients/brewfather.png' height='35px;'></a>"
+        desc: "Display your data on the [**Brewfather**](https://brewfather.app/?via=494298) app, you can effortlessly post your data and track your brewing journey all in one place (including [**iSpindel**](https://ispindel.de) data)."
         icon: fas fa-beer-mug-empty
       - title: "???"
         desc: "Display your data on the **Brewfather** app, you can effortlessly post your data and track your brewing journey all in one place (including **iSpindel** data)."
@@ -83,24 +83,6 @@ en: &DEFAULT_EN
     body: "At BrewSpider, we're passionate about great beer and innovative technology. Our startup is dedicated to revolutionizing the way homebrewers and small breweries approach the fermentation process. We've developed a cutting-edge device, also known as the BrewSpider, that empowers brewers with precision control over temperature and pressure during fermentation. With our user-friendly phone app, you can now manage your brewing process with ease, ensuring consistent and exceptional results every time."
     section: about
 
-  clients:
-    section: clients
-    max-height: 100px
-    horizontal-scrolling: "yes" #"yes/no"
-    list:
-      - title: "envato"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/envato.jpg
-      - title: "designmodo"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/designmodo.jpg
-      - title: "themeforest"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/themeforest.jpg
-      - title: "Creative Market"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/creative-market.jpg
-
   team:
     title: "Our Team"
     text: "A diverse team of brewing enthusiasts and tech innovators is united by a shared passion for perfecting the art of fermentation"
@@ -142,6 +124,25 @@ en: &DEFAULT_EN
     message-validation: "Please enter a message."
     subject: "Contact Form Submission"
     submit: "Send Message"
+
+  clients:
+    section: clients
+    max-height: 100px
+    horizontal-scrolling: "yes" #"yes/no"
+    list:
+      - title: "BrewFather"
+        url: https://brewfather.app/?via=494298
+        logo: assets/img/clients/brewfather.png  
+      - title: "designmodo"
+        url: https://github.com/raviriley/agency-jekyll-theme
+        logo: assets/img/clients/designmodo.jpg
+      - title: "themeforest"
+        url: https://github.com/raviriley/agency-jekyll-theme
+        logo: assets/img/clients/themeforest.jpg
+      - title: "Creative Market"
+        url: https://github.com/raviriley/agency-jekyll-theme
+        logo: assets/img/clients/creative-market.jpg
+
 
   footer:
     legal: "Privacy Policy"

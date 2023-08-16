@@ -36,10 +36,10 @@ en: &DEFAULT_EN
       - title: "Connect to <a target='_blank' href='https://brewfather.app/?via=494298'><img src= 'assets/img/clients/brewfather.png' height='35px;'></a>"
         desc: "Display your data on the [**Brewfather**](https://brewfather.app/?via=494298) app, you can effortlessly post your data and track your brewing journey all in one place (including [**iSpindel**](https://ispindel.de) data)."
         icon: fas fa-beer-mug-empty
-      - title: "???"
-        desc: "Display your data on the **Brewfather** app, you can effortlessly post your data and track your brewing journey all in one place (including **iSpindel** data)."
-        icon: fas fa-cpu
-
+      - title: "User-Friendly Interface"
+        desc: "Fermentation controls are at your fingertips. Our intuitive interface simplifies the brewing process, allowing you to focus on what matters most: crafting exceptional beer."
+        icon: fas fa-circle-play
+    
   portfolio:
     title: "Portfolio"
     text: "Lorem ipsum dolor sit amet consectetur."

@@ -127,23 +127,16 @@ en: &DEFAULT_EN
 
   clients:
     section: clients
-    max-height: 100px
+    max-height: 30px
     horizontal-scrolling: "yes" #"yes/no"
     list:
       - title: "BrewFather"
         url: https://brewfather.app/?via=494298
         logo: assets/img/clients/brewfather.png  
-      - title: "designmodo"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/designmodo.jpg
-      - title: "themeforest"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/themeforest.jpg
-      - title: "Creative Market"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/creative-market.jpg
-
-
+      - title: "Öl & Bröd"
+        url: 
+        logo: assets/img/clients/olandbrod.png
+        
   footer:
     legal: "Privacy Policy"
     social:

@@ -33,7 +33,7 @@ en: &DEFAULT_EN
       - title: "Connects to [***iSpindel***](https://ispindel.de)"
         desc: "It seamlessly integrates with the [**iSpindel**](https://ispindel.de), a wireless hydrometer and temperature sensor, allowing you to gather accurate data on your fermentation progress."
         icon: fas fa-vial
-      - title: "Connect to <a target='_blank' href='https://brewfather.app/?via=494298'><img src= 'assets/img/clients/brewfather.png' height='35px;'></a>"
+      - title: "Connect to <a target='_blank' href='https://brewfather.app/?via=494298'><img src= 'assets/img/clients/brewfather.png' height='35' alt='Brewfather'></a>"
         desc: "Display your data on the [**Brewfather**](https://brewfather.app/?via=494298) app, you can effortlessly post your data and track your brewing journey all in one place (including [**iSpindel**](https://ispindel.de) data)."
         icon: fas fa-beer-mug-empty
       - title: "User-Friendly Interface"
@@ -48,34 +48,44 @@ en: &DEFAULT_EN
 
   timeline:
     title: "How it works"
-    text: "Lorem ipsum timeline"
+    text: "Automating Fermentation Control"
     section: timeline
     # left is the default
     # start_align: "left"
     events:
-      - title: "Our Humble Beginnings"
-        year: "2009-2011"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-        image: assets/img/timeline/1.jpg
+      - title: "Setup your Brewery"
+        year: ""
+        desc: "Place the **BrewSpider** device in your fermentation area. Connect it the heating element and fridge to their power corresponding sockets. Attach the temperature sensor, the pressure sensor and the pressure solenoid to your fermenter."
+        image: assets/img/timeline/brewery_setup.webp
+        alt: 
+      - title: "Connect it to Wifi"
+        year: ""
+        desc: "Download our app, find your device (Press the reset button for 10 seconds if needed). Follow the prompt to connect **BrewSpider** to your WiFi network."
+        image: assets/img/timeline/wifi.webp
         alt:
-      - title: "An Agency is Born"
-        year: "March 2011"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-        image: assets/img/timeline/2.jpg
-        alt:
-      - title: "Jekyll Theme is created"
-        year: "2019"
-        desc: "Ravi Riley converted Agency, a Bootstrap-based theme, into a Jekyll theme. The Jekyll theme can be installed as a Ruby gem, or remotely. For more information, visit the documentation."
-        image: assets/img/timeline/3.jpg
+      - title: "Connect iSpindel"
+        year: ""
+        desc: 'Login to your **iSpindel** setup page, select the WiFi SSID: **Brewspider_WiFi**, Server Address: **192.168.5.1**", Service Type: **http**, Server Port:**80**, Path: **/ispindel**. '
+        image: assets/img/timeline/ispindel.webp
         alt: image alt text
-      - title: "Title"
-        year: "2009-2011"
-        desc: "Your description here, **Markdown** is fully supported."
-        image: assets/img/timeline/4.jpg
+      - title: "Set your parameters"
+        year: ""
+        desc: "Specify your desired fermentation temperature and pressure settings through the the phone app or create custom settings tailored to your brew."
+        image: assets/img/timeline/phone_app.webp
+        alt: image alt text
+      - title: "Monitor & Adjust"
+        year: ""
+        desc: "Keep an eye on your fermentation process in real-time from the app. If conditions need to be tweaked, make adjustments on the fly to ensure your brew is on the right track."
+        image: assets/img/timeline/monitor.webp
+        alt:
+      - title: "Data Integration"
+        year: ""
+        desc: "Setup **BrewSpider** to send all the data from its sensors, in addition to **iSpindel** data to your <a target='_blank' href='https://brewfather.app/?via=494298'><img src= 'assets/img/clients/brewfather.png' height='35px;'></a> app for detailed analysis or sharing."
+        image: assets/img/timeline/integrate.webp
         alt:
         # you can enforce the alignment
-        align: right
-    end: "Be Part <br> of Our <br> Story!"
+        # align: right
+    end: "<br> Cheers!"
 
   about:
     title: "About Us"
@@ -127,23 +137,16 @@ en: &DEFAULT_EN
 
   clients:
     section: clients
-    max-height: 100px
+    max-height: 30px
     horizontal-scrolling: "yes" #"yes/no"
     list:
       - title: "BrewFather"
         url: https://brewfather.app/?via=494298
         logo: assets/img/clients/brewfather.png  
-      - title: "designmodo"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/designmodo.jpg
-      - title: "themeforest"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/themeforest.jpg
-      - title: "Creative Market"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/creative-market.jpg
-
-
+      - title: "Öl & Bröd"
+        url: 
+        logo: assets/img/clients/olandbrod.png
+        
   footer:
     legal: "Privacy Policy"
     social:

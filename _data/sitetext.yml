@@ -80,7 +80,7 @@ en: &DEFAULT_EN
         alt:
       - title: "Data Integration"
         year: ""
-        desc: "Setup **BrewSpider** to send all the data from its sensors, in addition to **iSpindel** data to your <a target='_blank' href='https://brewfather.app/?via=494298'><img src= 'assets/img/clients/brewfather.png' height='35px;'></a> app for detailed analysis or sharing."
+        desc: "Setup **BrewSpider** to send all the data from its sensors, in addition to **iSpindel** data to your <a target='_blank' href='https://brewfather.app/?via=494298'><img src= 'assets/img/clients/brewfather.png' height='35' alt = 'BrewFather'></a> app for detailed analysis or sharing."
         image: assets/img/timeline/integrate.webp
         alt:
         # you can enforce the alignment
@@ -107,18 +107,21 @@ en: &DEFAULT_EN
             icon: fab fa-twitter
           - url: https://github.com/alghazu
             icon: fab fa-github
-          - url: https://linkedin.com
+          - url: www.linkedin.com/in/alghazu
             icon: fab fa-linkedin-in
+          - url: mailto:nader@brewspider.com
+            icon: fas fa-envelope
       - name: "Roman D."
         role: "Brewmaster & Market Analyst"
         image: assets/img/team/2.jpg
         social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
+          - url: https://www.facebook.com/roman.demchenko.9
             icon: fab fa-facebook-f
-          - url: https://linkedin.com
+          - url: https://www.linkedin.com/in/demchenkoroman/
             icon: fab fa-linkedin-in
+          - url: mailto:roman@brewspider.com
+            icon: fas fa-envelope
+
 
   contact:
     title: "Contact Us"
@@ -150,13 +153,13 @@ en: &DEFAULT_EN
   footer:
     legal: "Privacy Policy"
     social:
-      - url: https://twitter.com
+      - url: https://twitter.com/Brew_Spider
         icon: "fab fa-twitter"
-      - url: https://facebook.com
+      - url: https://www.facebook.com/BrewSpider
         icon: "fab fa-facebook-f"
-      - url: https://linkedin.com
+      - url: https://www.linkedin.com/company/brewspider/
         icon: "fab fa-linkedin-in"
-      - url: https://instagram.com
+      - url: https://www.instagram.com/brewspider/
         icon: "fab fa-instagram"
 en-US:
   <<: *DEFAULT_EN

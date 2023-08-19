@@ -5,9 +5,13 @@
       <div class="row justify-content-center" {% if site.data.sitetext[site.locale].clients.horizontal-scrolling == "yes" %} id="scrolling-clients" {% endif %}>
 	    {% for client in site.data.sitetext[site.locale].clients.list %}
         <div class="col-md-3 col-sm-6">
-          <a {% if client.url %} href="{{ client.url }}" target="_blank" {% endif %}>
+          {% if client.url %}
+          <a href="{{ client.url }}" target="_blank">
+          {% endif %}
             <img class="img-fluid d-block mx-auto" src="{{ client.logo }}" alt="{{ client.title }}" style="max-height: {{ site.data.sitetext[site.locale].clients.max-height | default: "100px" }}">
+          {% if client.url %}
           </a>
+          {% endif %}
         </div>
 	    {% endfor %}
       </div>
@@ -19,9 +23,13 @@
     <div class="row justify-content-center" {% if site.data.sitetext.clients.horizontal-scrolling == "yes" %} id="scrolling-clients" {% endif %}>
     {% for client in site.data.sitetext.clients.list %}
       <div class="col-md-3 col-sm-6">
-        <a {% if client.url %} href="{{ client.url }}" target="_blank" {% endif %}>
+        {% if client.url %}
+        <a href="{{ client.url }}" target="_blank">
+        {% endif %}
           <img class="img-fluid d-block mx-auto" src="{{ client.logo }}" alt="{{ client.title }}" style="max-height: {{ site.data.sitetext.clients.max-height | default: "100px" }}">
+        {% if client.url %}
         </a>
+        {% endif %}
       </div>
     {% endfor %}
     </div>

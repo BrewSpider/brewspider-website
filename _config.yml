@@ -18,7 +18,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 title      : BrewSpider
 email      : contact@brewspider.com  #this is also the email contact forms will go to
-description: "Site description"
+description: "The ultimate fermentation control solution. Achieve precision temperature and pressure control, monitor from anywhere, and seamlessly connect with iSpindel and Brewfather for exceptional brewing results. Discover simplicity and innovation in every batch."
 author     : Nader
 logo:     #optional, defaults to site title
   path: assets/img/logo/logo.svg

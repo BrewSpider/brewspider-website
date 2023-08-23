@@ -57,12 +57,16 @@
       {%- if site.data.sitetext[site.locale].header.text -%}
       <div class="intro-heading text-uppercase">{{ site.data.sitetext[site.locale].header.text | markdownify }}</div>
       {%- endif -%}
-      <img src="assets/img/product/product-right-corner.png" alt="Product" class="img-fluid">
-      {%- if site.data.sitetext[site.locale].header.button -%}
-      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-        href="{{ site.data.sitetext[site.locale].header.buttonlink }}">{{ site.data.sitetext[site.locale].header.button
-        }}</a>
-      {%- endif -%}
+      <div class="row justify-content-around">
+        <img src="{{ site.data.sitetext[site.locale].header.image }}" alt="Product">
+      </div>
+      <div class="row justify-content-around">
+        {%- if site.data.sitetext[site.locale].header.button -%}
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+          href="{{ site.data.sitetext[site.locale].header.buttonlink }}">{{
+          site.data.sitetext[site.locale].header.button }}</a>
+        {%- endif -%}
+      </div>
     </div>
   </div>
 </header>
@@ -76,11 +80,15 @@
       {%- if site.data.sitetext.header.text -%}
       <div class="intro-heading text-uppercase">{{ site.data.sitetext.header.text | markdownify }}</div>
       {%- endif -%}
-      <img src="assets/img/product/product-right-corner.png" alt="Product" class="img-fluid">
+      <div class="row justify-content-around">
+        <img src="{{ site.data.sitetext.header.image }}" alt="Product">
+      </div>
       {%- if site.data.sitetext.header.button -%}
-      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-        href="{{ site.data.sitetext.header.buttonlink }}">{{ site.data.sitetext.header.button }}</a>
-      {%- endif -%}
+      <div class="row justify-content-around">
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+          href="{{ site.data.sitetext.header.buttonlink }}">{{ site.data.sitetext.header.button }}</a>
+        {%- endif -%}
+      </div>
     </div>
   </div>
 </header>

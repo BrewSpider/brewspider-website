@@ -13,6 +13,7 @@ en: &DEFAULT_EN
   header:
     title: Precision Brewing Simplified
     text: Click. Brew. Cheers!
+    image: assets/img/product/product.webp
     button: Learn More
     buttonlink: "#features"
 

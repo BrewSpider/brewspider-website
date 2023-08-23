@@ -1,3 +1,4 @@
+--- # -----------------
 #
 # Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
 #
@@ -8,7 +9,6 @@
 # {{ site.data.ui-text[site.locale].<var_name> | default: 'text' }}
 
 # English (default)
-# -----------------
 en: &DEFAULT_EN
   header:
     title: Precision Brewing Simplified
@@ -29,7 +29,7 @@ en: &DEFAULT_EN
         icon: fas fa-gauge-high
       - title: "Control from Anywhere"
         desc: "Whether you're at the brewery, on the couch, or even on the go, you can easily monitor and adjust fermentation settings with a few taps on your phone."
-        icon: fas fa-gamepad 
+        icon: fas fa-gamepad
       - title: "Connects to [***iSpindel***](https://ispindel.de)"
         desc: "It seamlessly integrates with the [**iSpindel**](https://ispindel.de), a wireless hydrometer and temperature sensor, allowing you to gather accurate data on your fermentation progress."
         icon: fas fa-vial
@@ -39,9 +39,9 @@ en: &DEFAULT_EN
       - title: "User-Friendly Interface"
         desc: "Fermentation controls are at your fingertips. Our intuitive interface simplifies the brewing process, allowing you to focus on what matters most: crafting exceptional beer."
         icon: fas fa-circle-play
-    
+
   portfolio:
-    title: "Portfolio"
+    title: "Product Photos"
     text: "Lorem ipsum dolor sit amet consectetur."
     section: portfolio
     closebutton: "Close Project"
@@ -57,7 +57,7 @@ en: &DEFAULT_EN
         year: ""
         desc: "Place the **BrewSpider** device in your fermentation area. Connect it the heating element and fridge to their power corresponding sockets. Attach the temperature sensor, the pressure sensor and the pressure solenoid to your fermenter."
         image: assets/img/timeline/brewery_setup.webp
-        alt: 
+        alt:
       - title: "Connect it to Wifi"
         year: ""
         desc: "Download our app, find your device (Press the reset button for 10 seconds if needed). Follow the prompt to connect **BrewSpider** to your WiFi network."
@@ -122,7 +122,6 @@ en: &DEFAULT_EN
           - url: mailto:roman@brewspider.com
             icon: fas fa-envelope
 
-
   contact:
     title: "Contact Us"
     text: "We're just an email away, don't hesitate to contact us"
@@ -145,11 +144,11 @@ en: &DEFAULT_EN
     list:
       - title: "BrewFather"
         url: https://brewfather.app/?via=494298
-        logo: assets/img/clients/brewfather.png  
+        logo: assets/img/clients/brewfather.png
       - title: "Öl & Bröd"
-        url: 
+        url:
         logo: assets/img/clients/olandbrod.png
-        
+
   footer:
     legal: "Privacy Policy"
     social:

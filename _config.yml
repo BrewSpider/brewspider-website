@@ -11,8 +11,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-theme: jekyll-agency
-
 url    : "https://brewspider.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
@@ -34,5 +32,3 @@ collections:
 
 markdown: kramdown
 
-# Uncomment one of the following line to use Formspree, otherwise Netlify forms
-# formspree_form_path: "https://formspree.io/f/xjvqyeev" 

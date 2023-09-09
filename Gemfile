@@ -9,7 +9,6 @@ group :development do
   gem 'rake', '~> 13.0'
 end
 
-gem 'jekyll-twitter-plugin'
 
 
 

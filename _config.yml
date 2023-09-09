@@ -32,5 +32,3 @@ collections:
 
 markdown: kramdown
 
-# Uncomment one of the following line to use Formspree, otherwise Netlify forms
-# formspree_form_path: "https://formspree.io/f/xjvqyeev" 

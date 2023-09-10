@@ -2,12 +2,12 @@
 caption: # What displays in the portfolio grid
   title: Phone App V1
   subtitle: Control Your Fermentation
-  thumbnail: assets/img/product/app2.png
+  thumbnail: assets/img/product/app2.webp
   
 # What displays when the item is clicked
 title: Phone App V1
 subtitle: Take Charge of Your Brew from Anywhere
-image: assets/img/product/app2.png
+image: assets/img/product/app2.webp
 alt: Phone App
 
 ---

@@ -2,23 +2,17 @@
 caption:
   title: First Prototype
   subtitle: Your Journey Begins Here
-  thumbnail: assets/img/product/device-with-ispindel.png
+  thumbnail: assets/img/product/device-with-ispindel.webp
 
-title: Innovative Fermentation Controller
+title: Innovative Controller
 subtitle: Introducing Our Functional First Prototype
-image: assets/img/product/device-with-ispindel.png
+image: assets/img/product/device-with-ispindel.webp
 alt: Explore the Future of Fermentation
 ---
 
 Discover the Future of Fermentation!
 
 We are proud to introduce the first-of-its-kind fermentation controller that combines precision pressure, heat, cooling control, density tracking, and remote device access. We're excited to announce that our initial prototype is now complete and fully functional!
-
-🌟 **Key Features:**
-- **Pressure Control:** Maintain optimal fermentation conditions effortlessly.
-- **Heat and Cooling:** Achieve the perfect temperature for your brew.
-- **Density Tracking:** Monitor the progress of your fermentation with precision.
-- **Remote Device Access:** Stay in control from anywhere in the world.
 
 🔥 **The Journey Begins:**
 Our team has been hard at work to bring you this innovative solution. With the first prototype in hand, we're one step closer to transforming your brewing experience.

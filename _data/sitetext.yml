@@ -42,10 +42,10 @@ en: &DEFAULT_EN
         icon: fas fa-circle-play
 
   portfolio:
-    title: "Product Photos"
-    text: "Lorem ipsum dolor sit amet consectetur."
+    title: "Updates"
+    text: ""
     section: portfolio
-    closebutton: "Close Project"
+    closebutton: "Close"
 
   timeline:
     title: "How it works"

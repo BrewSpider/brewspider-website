@@ -56,7 +56,7 @@ en: &DEFAULT_EN
     events:
       - title: "Setup your Brewery"
         year: ""
-        desc: "Place the **BrewSpider** device in your fermentation area. Connect it the heating element and fridge to their power corresponding sockets. Attach the temperature sensor, the pressure sensor and the pressure solenoid to your fermenter."
+        desc: "Place the **BrewSpider** device in your fermentation area. Connect the heating element and fridge to their power corresponding sockets. Attach the temperature sensor, the pressure sensor and the pressure solenoid to your fermenter."
         image: assets/img/timeline/brewery_setup.webp
         alt:
       - title: "Connect it to Wifi"

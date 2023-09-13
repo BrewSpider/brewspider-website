@@ -4,7 +4,7 @@ caption:
   subtitle: Your Journey Begins Here
   thumbnail: assets/img/product/device-with-ispindel.webp
 
-title: Innovative Controller
+title: Innovative Fermentation Controller
 subtitle: Introducing Our Functional First Prototype
 image: assets/img/product/device-with-ispindel.webp
 alt: Explore the Future of Fermentation

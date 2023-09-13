@@ -1,18 +1,18 @@
 ---
 caption: # What displays in the portfolio grid
-  title: Phone App V1
+  title: Phone App V1.0
   subtitle: Control Your Fermentation
   thumbnail: assets/img/product/app2.webp
   
 # What displays when the item is clicked
-title: Phone App V1
+title: Phone App V1.0
 subtitle: Take Charge of Your Brew from Anywhere
 image: assets/img/product/app2.webp
 alt: Phone App
 
 ---
 
-Introducing Phone App V1 – Your Brewmaster's Companion!
+Introducing Phone App V1.0 – Your Brewmaster's Companion!
 
 📱 **Control Your Fermentation with Ease:** 
 

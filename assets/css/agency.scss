@@ -12,6 +12,7 @@ $black: {{ site.data.style.black | default: "#000" }} !default;
 
 // Custom Images
 $header-image: "{{ site.data.style.header-image }}";
+$header-image-mobile: "{{ site.data.style.header-image-mobile }}";
 $contact-image: "{{ site.data.style.contact-image }}";
 
 // Global CSS

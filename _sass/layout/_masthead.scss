@@ -2,7 +2,7 @@
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("#{$header-image}");
+  background-image: url("#{$header-image-mobile}");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -36,6 +36,7 @@ header.masthead {
 
 @media (min-width: 768px) {
   header.masthead {
+    background-image: url("#{$header-image}");
     img {
         max-width: 510px;
       }

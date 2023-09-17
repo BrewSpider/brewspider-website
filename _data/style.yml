@@ -5,6 +5,7 @@ highlight: "#E0980B"
 
 #Image Customization
 header-image: "../img/header.webp"
+header-image-mobile: "../img/header-mobile.webp"
 contact-image: "../img/contact.webp"
 #Font Awesome icon for portfolio grid when an item is hovered over
 # portfolio-icon: fas fa-expand-arrows-alt fa-3x #default: fas fa-plus fa-3x

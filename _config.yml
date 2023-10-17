@@ -30,5 +30,6 @@ analytics:
 collections:
   portfolio:
 
+exclude: ["LICENSE.txt", "README.md", "ToDoList.md"]
 markdown: kramdown
 

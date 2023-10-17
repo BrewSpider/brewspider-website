@@ -105,7 +105,7 @@ en: &DEFAULT_EN
         image: assets/img/team/1.jpg
         social:
           - url: https://twitter.com
-            icon: fab fa-twitter
+            icon: fab fa-x-twitter
           - url: https://github.com/alghazu
             icon: fab fa-github
           - url: www.linkedin.com/in/alghazu
@@ -154,7 +154,7 @@ en: &DEFAULT_EN
     legal: "Privacy Policy"
     social:
       - url: https://twitter.com/Brew_Spider
-        icon: "fab fa-twitter"
+        icon: "fab fa-x-twitter"
       - url: https://www.facebook.com/BrewSpider
         icon: "fab fa-facebook-f"
       - url: https://www.linkedin.com/company/brewspider/

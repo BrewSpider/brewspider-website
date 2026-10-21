@@ -1,0 +1,14 @@
+{%- comment -%}
+  Inline SVG icon from _data/icons.yml (Font Awesome Free paths).
+  name: Font Awesome classes as in _data/sitetext.yml, e.g. "fas fa-gauge-high"; the first known icon wins.
+  class: extra CSS classes.
+{%- endcomment -%}
+{%- assign icon = false -%}
+{%- assign tokens = include.name | split: " " -%}
+{%- for token in tokens -%}
+{%- assign key = token | remove_first: "fa-" -%}
+{%- if site.data.icons[key] -%}{%- assign icon = site.data.icons[key] -%}{%- break -%}{%- endif -%}
+{%- endfor -%}
+{%- if icon -%}
+<svg class="icon {{ include.class }}" viewBox="0 0 {{ icon.w }} 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="{{ icon.d }}"/></svg>
+{%- endif -%}

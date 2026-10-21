@@ -1,5 +1,5 @@
 <!-- Portfolio Grid -->
-<section class="bg-light page-section" id="{{ site.data.sitetext.portfolio.section | default: "portfolio" }}">
+<section class="bg-light page-section" id="{{ site.data.sitetext[site.locale].portfolio.section | default: "portfolio" }}">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -13,10 +13,11 @@
         <a class="portfolio-link" data-toggle="modal" href="#p{{ forloop.index }}">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="{{ site.data.style.portfolio-icon | default: "fas fa-plus fa-3x" }}"></i>
+              {% include icon.html name="fas fa-plus" class="icon-3x" %}
             </div>
           </div>
-          <img class="img-fluid" src="{{ project.caption.thumbnail }}" alt="">
+          <img class="img-fluid" src="{{ project.caption.thumbnail | relative_url }}" alt="{{ project.caption.title }}"
+            width="1080" height="1080" loading="lazy">
         </a>
         <div class="portfolio-caption">
           <h4>{{ project.caption.title }}</h4>

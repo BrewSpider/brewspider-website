@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Privacy Policy
+permalink: /legal
 background: grey
 ---
 

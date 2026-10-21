@@ -2,6 +2,7 @@
 layout: page
 title: Page Not Found
 background: grey
+sitemap: false
 ---
 
 <section class="page-section">
@@ -12,7 +13,8 @@ background: grey
         <h3 class="section-subheading text-muted">
           The requested page could not be found.
         </h3>
-        <img src="assets/img/mascot.webp" alt="mascot" class="img-fluid">
+        <img src="{{ '/assets/img/mascot.webp' | relative_url }}" alt="BrewSpider mascot" class="img-fluid" width="327" height="335">
+        <p><a href="{{ '/' | relative_url }}">Back to the home page</a></p>
       </div>
     </div>
   </div>

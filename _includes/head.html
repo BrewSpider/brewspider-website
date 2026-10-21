@@ -16,47 +16,27 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="{{ site.description }}">
-  <meta name="author" content="{{ site.author }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta name="theme-color" content="#212529">
 
-  <title>{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
-
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="{{ site.title }}" />
-  <link rel="canonical" href="https://brewspider.com/" />
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://brewspider.com/" />
-  <meta property="og:title" content="BrewSpider" />
-  <meta property="og:description" content="The ultimate fermentation control solution. Achieve precision temperature and pressure control, monitor from anywhere, and seamlessly connect with iSpindel and Brewfather for exceptional brewing results. Discover simplicity and innovation in every batch." />
-  <meta property="og:image" content="https://brewspider.com/assets/img/header-thumbnail.jpg" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://brewspider.com/" />
-  <meta property="twitter:title" content="BrewSpider" />
-  <meta property="twitter:description" content="The ultimate fermentation control solution. Achieve precision temperature and pressure control, monitor from anywhere, and seamlessly connect with iSpindel and Brewfather for exceptional brewing results. Discover simplicity and innovation in every batch." />
-  <meta property="twitter:image" content="https://brewspider.com/assets/img/header-thumbnail.jpg" />
+  <!-- Title, description, canonical URL, Open Graph, X/Twitter card, structured data (jekyll-seo-tag) -->
+  {% seo %}
 
   <!-- Bootstrap core CSS -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-  
-  <!-- Fontawsome CSS  -->
-  <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
 
-  <!-- Custom fonts for this template -->
+  <!-- Fonts (one request; Droid Serif was retired by Google, Noto Serif is its successor) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Nova+Round&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
 
   <!-- Custom styles for this theme -->
-  <link href="assets/css/agency.css" rel="stylesheet" />
+  <link href="{{ '/assets/css/agency.css' | relative_url }}" rel="stylesheet">
+
+  {% if page.layout == "home" %}
+  <!-- Hero background: start downloading before the stylesheet asks for it -->
+  <link rel="preload" as="image" href="{{ '/assets/img/header-mobile.webp' | relative_url }}" media="(max-width: 767px)">
+  <link rel="preload" as="image" href="{{ '/assets/img/header.webp' | relative_url }}" media="(min-width: 768px)">
+  {% endif %}
 
   <!-- Page container change top padding when nav shrinks -->
   {% if page.layout == "page" %}

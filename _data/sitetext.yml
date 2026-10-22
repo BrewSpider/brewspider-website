@@ -255,8 +255,8 @@ en: &DEFAULT_EN
     plug_heat: "Heating plug"
     plug_cool: "Cooling plug"
     items:
-      - q: "Does it need the internet to work?"
-        a: "No. Temperature and pressure control run on the device. Without Wi-Fi it keeps regulating with your last targets and stores its readings, then sends them when it is back online."
+      - q: "What happens if I lose the internet connection?"
+        a: "BrewSpider keeps regulating temperature and pressure with your last targets, because control runs on the device itself. It stores its readings and sends them once the connection is back (about 12 hours of readings at normal rates). Until then you can't follow it or change targets in the app."
         open: true
       - q: "What is wired and what is wireless?"
         a: "Only the parts on the fermenter are wired: the temperature probe, the pressure sensor and the vent valve, all on 12 V. The heater and the fridge plug into two smart plugs that BrewSpider switches without cables, and a floating sensor like the iSpindel sends its readings over Wi-Fi. No mains cable goes to the controller."
@@ -266,8 +266,8 @@ en: &DEFAULT_EN
       # TO CONFIRM: which smart plugs are supported or included.
       # - q: "Which smart plugs work?"
       #   a: "..."
-      - q: "What happens if the Wi-Fi, a sensor or the power drops?"
-        a: "Without Wi-Fi it keeps regulating and sends the missed readings later. If the floating sensor stops reporting, it switches to the wired probe. If the pressure sensor fails, it closes the valve and raises an alarm. In a power cut everything switches off and the valve stays closed; when power returns it carries on with your saved targets."
+      - q: "What happens if a sensor or the power drops?"
+        a: "If the floating sensor stops reporting, it switches to the wired probe. If the pressure sensor fails, it closes the valve and raises an alarm. In a power cut everything switches off and the valve stays closed; when power returns it carries on with your saved targets."
       - q: "Which fermenters can use pressure control?"
         a: "A fermenter rated for the pressure you want, with a mechanical pressure relief valve and a free gas connection. You enter your vessel's maximum pressure (up to 2.4 bar), and BrewSpider vents before it gets there."
       # TO CONFIRM: the valve's fitting size; then add it to the answer above.

@@ -315,13 +315,20 @@ en: &DEFAULT_EN
         url: /contact/
       - title: "Privacy"
         url: /legal
-      - title: "Instagram"
+      - title: "Brewing apps"
+        url: /brewing-apps/
+    social:
+      - title: "BrewSpider on Instagram"
+        icon: instagram
         url: https://www.instagram.com/brewspider/
-      - title: "Facebook"
+      - title: "BrewSpider on Facebook"
+        icon: facebook-f
         url: https://www.facebook.com/BrewSpider
-      - title: "LinkedIn"
+      - title: "BrewSpider on LinkedIn"
+        icon: linkedin-in
         url: https://www.linkedin.com/company/brewspider/
-      - title: "X"
+      - title: "BrewSpider on X (Twitter)"
+        icon: x-twitter
         url: https://twitter.com/Brew_Spider
     # TO CONFIRM: company name and organisation number, once registered.
     # company: ""

@@ -8,6 +8,12 @@
       <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
       {%- endfor %}
     </ul>
+    <ul class="footer-social">
+      {%- for link in footer.social %}
+      {%- assign icon = site.data.social[link.icon] %}
+      <li><a href="{{ link.url }}" aria-label="{{ link.title }}" title="{{ link.title }}" rel="noopener"><svg width="20" height="20" viewBox="0 0 {{ icon.w }} 512" fill="currentColor" aria-hidden="true"><path d="{{ icon.d }}"/></svg></a></li>
+      {%- endfor %}
+    </ul>
     <p class="footer-legal">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}{% if footer.company %} · {{ footer.company }}{% endif %}</p>
   </div>
 </footer>

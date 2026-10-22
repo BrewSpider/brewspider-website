@@ -155,6 +155,24 @@
   a { display: inline-block; padding: 6px 0; }
 }
 
+.footer-social {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  a {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 204, 170, .08);
+    color: var(--nav-link);
+    &:hover { background: var(--button); color: #fff; }
+  }
+}
+
 .footer-legal {
   flex-basis: 100%;
   color: var(--footer-soft);

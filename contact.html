@@ -1,0 +1,34 @@
+---
+layout: page
+title: Contact us
+permalink: /contact/
+description: "Questions, ideas, or want to hear when BrewSpider is available? Send us a message."
+---
+{%- assign c = site.data.sitetext[site.locale].contact -%}
+<h1>{{ c.title }}</h1>
+<p class="lead">{{ c.text }}</p>
+
+{%- comment -%} Netlify form "contact-brewspider": keep the name and field names, Netlify files submissions under them. {%- endcomment %}
+<form class="contact-form" name="contact-brewspider" method="POST" data-netlify="true" netlify-honeypot="_gotcha">
+  <input type="hidden" name="form-name" value="contact-brewspider">
+  <input type="hidden" name="_subject" value="{{ c.subject }}">
+  <p class="honeypot" hidden><label>Leave this empty <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+  <div>
+    <label for="name">{{ c.name }}</label>
+    <input id="name" name="name" type="text" autocomplete="name" required>
+  </div>
+  <div>
+    <label for="email">{{ c.email }}</label>
+    <input id="email" name="_replyto" type="email" autocomplete="email" required>
+  </div>
+  <div>
+    <label for="phone">{{ c.phone }} <span class="optional">{{ c.optional }}</span></label>
+    <input id="phone" name="phone" type="tel" autocomplete="tel">
+  </div>
+  <div>
+    <label for="message">{{ c.message }}</label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
+  <button class="button button-lg" type="submit">{{ c.submit }}</button>
+  <p class="form-status" role="status" aria-live="polite" data-sent="{{ c.sent | escape }}" data-failed="{{ c.failed | escape }}"></p>
+</form>

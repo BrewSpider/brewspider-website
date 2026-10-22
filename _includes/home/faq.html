@@ -6,6 +6,12 @@
     <details class="faq-item card"{% if item.open %} open{% endif %}>
       <summary>{{ item.q }}</summary>
       <p>{{ item.a }}</p>
+      {%- if item.figure == "plugs" %}
+      <div class="faq-plugs" aria-hidden="true">
+        <span>{% include plug.html kind="heat" size=72 %}{{ faq.plug_heat }}</span>
+        <span>{% include plug.html kind="cool" size=72 %}{{ faq.plug_cool }}</span>
+      </div>
+      {%- endif %}
     </details>
     {%- endfor %}
   </div>

@@ -252,18 +252,29 @@ en: &DEFAULT_EN
 
   faq:
     title: "Questions brewers ask"
+    plug_heat: "Heating plug"
+    plug_cool: "Cooling plug"
     items:
       - q: "Does it need the internet to work?"
-        a: "No. Temperature and pressure control run on the device. Without Wi-Fi it keeps regulating and stores its readings, then sends them when it is back online."
+        a: "No. Temperature and pressure control run on the device. Without Wi-Fi it keeps regulating with your last targets and stores its readings, then sends them when it is back online."
         open: true
-      # TO CONFIRM: which smart plugs are supported.
-      # - q: "Which heaters and fridges work?"
-      #   a: "Anything you can plug into a supported smart plug: ..."
-      # TO CONFIRM: the valve's fitting size.
-      # - q: "Which fermenters can use pressure control?"
-      #   a: "Pressure-rated fermenters with a ... port. You enter your vessel's maximum pressure, and BrewSpider vents before it gets there."
-      - q: "Do I need an iSpindel?"
-        a: "No. The wired probe is enough for temperature control. An iSpindel adds gravity and battery readings, and can be the main temperature sensor."
+      - q: "What is wired and what is wireless?"
+        a: "Only the parts on the fermenter are wired: the temperature probe, the pressure sensor and the vent valve, all on 12 V. The heater and the fridge plug into two smart plugs that BrewSpider switches without cables, and a floating sensor like the iSpindel sends its readings over Wi-Fi. No mains cable goes to the controller."
+      - q: "How do the heater and the fridge get switched?"
+        a: "Plug the heater into the heating smart plug and the fridge into the cooling one. BrewSpider decides when each should be on and switches its plug, and gives the fridge a rest between starts to protect the compressor. If you only heat or only cool, use just one plug."
+        figure: plugs
+      # TO CONFIRM: which smart plugs are supported or included.
+      # - q: "Which smart plugs work?"
+      #   a: "..."
+      - q: "What happens if the Wi-Fi, a sensor or the power drops?"
+        a: "Without Wi-Fi it keeps regulating and sends the missed readings later. If the floating sensor stops reporting, it switches to the wired probe. If the pressure sensor fails, it closes the valve and raises an alarm. In a power cut everything switches off and the valve stays closed; when power returns it carries on with your saved targets."
+      - q: "Which fermenters can use pressure control?"
+        a: "A fermenter rated for the pressure you want, with a mechanical pressure relief valve and a free gas connection. You enter your vessel's maximum pressure (up to 2.4 bar), and BrewSpider vents before it gets there."
+      # TO CONFIRM: the valve's fitting size; then add it to the answer above.
+      - q: "Do I need a floating sensor like the iSpindel?"
+        a: "No. The wired probe is enough for temperature control. A floating sensor adds gravity and battery readings, and can be the main temperature sensor, with the wired probe as its backup."
+      - q: "What do I need at home?"
+        a: "A 2.4 GHz Wi-Fi network, and an Android phone or any web browser for the app. The iPhone app is on the way."
       - q: "When can I buy one?"
         a: "We are preparing pre-orders. Leave your email below and you will be the first to know."
 

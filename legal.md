@@ -27,8 +27,7 @@ If you sign up for launch updates on the Site, we receive your email address. We
 
 The sign-up is handled by Netlify, Inc., the same way as the contact form above: Netlify stores your address and passes it to us, under the same data processing agreement and safeguards.
 
-To unsubscribe, reply to any of our emails or write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>; we then delete your address from the list. We keep your address until you unsubscribe.
-{%- comment -%} TO CONFIRM (Nader): a maximum retention time for the launch list, e.g. delete addresses some time after pre-orders open. {%- endcomment %}
+To unsubscribe, reply to any of our emails or write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>; we then delete your address from the list. Otherwise we keep it until you unsubscribe, and no longer than 12 months after pre-orders open; then we delete the list.
 
 ## Cookies and statistics
 

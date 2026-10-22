@@ -8,7 +8,7 @@ caption: # What displays in the portfolio grid
 title: The BrewSpider App
 subtitle: Phone and web, one account
 image: assets/img/product/app.webp
-alt: The BrewSpider app: status and control screens
+alt: "The BrewSpider app, status and control screens"
 
 ---
 

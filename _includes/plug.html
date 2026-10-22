@@ -1,0 +1,16 @@
+{%- comment -%}
+  A generic smart plug (EU socket), drawn. include.kind: heat or cool; include.size in px.
+{%- endcomment -%}
+{%- if include.kind == "cool" -%}{%- assign c = "#2F6FB0" -%}{%- else -%}{%- assign c = "#D45500" -%}{%- endif -%}
+<svg class="plug" width="{{ include.size | default: 40 }}" height="{{ include.size | default: 40 }}" viewBox="0 0 48 48" aria-hidden="true">
+  <rect x="7" y="4" width="34" height="40" rx="9" fill="#fff" stroke="#2B1100" stroke-width="2"/>
+  <circle cx="24" cy="22" r="11" fill="{{ c }}" fill-opacity=".12" stroke="{{ c }}" stroke-width="2"/>
+  <circle cx="19.5" cy="22" r="2" fill="#2B1100"/>
+  <circle cx="28.5" cy="22" r="2" fill="#2B1100"/>
+  <circle cx="24" cy="38" r="2" fill="{{ c }}"/>
+  {%- if include.kind == "cool" %}
+  <path d="M36 2v10M31.7 4.5l8.6 5M40.3 4.5l-8.6 5" stroke="{{ c }}" stroke-width="2" stroke-linecap="round"/>
+  {%- else %}
+  <path d="M36 1.5c1.5 2.2 3.6 3.6 3.6 6.5a3.6 3.6 0 0 1-7.2 0c0-1.4.7-2.2 1.4-2.9 0 1.4.7 2.2 1.4 2.2 0-2.2-.7-3.6.8-5.8z" fill="{{ c }}"/>
+  {%- endif %}
+</svg>

@@ -60,39 +60,56 @@ en: &DEFAULT_EN
   system:
     eyebrow: "One box for the whole fermentation"
     title: "Sensors in, heater, fridge and valve out."
-    text: "BrewSpider reads the temperature and pressure in your fermenter and decides, on the device itself, when to heat, cool or vent."
+    text: "BrewSpider reads the temperature and pressure in your fermenter and decides, on the device itself, when to heat, cool or vent. Only the parts on the fermenter have cables, and they run on 12 V. The heater, the fridge and the floating sensor connect without wires."
+    wired: "Wired"
+    wireless: "Wireless"
+    # Numbers match the markers on the photo; x/y = marker position on the photo in %.
     inputs_label: "What BrewSpider reads"
     inputs:
       - icon: thermometer
-        title: "Wired temperature probe"
-        text: "In the thermowell, always on"
+        title: "Temperature probe"
+        text: "In the thermowell or taped to the fermenter"
+        link: wired
+        x: 57
+        y: 66
       - icon: gauge
         title: "Pressure sensor"
-        text: "On the fermenter lid"
+        text: "On the gas side of the lid"
+        link: wired
+        x: 44
+        y: 73
       - icon: hydrometer
-        title: "iSpindel (optional)"
-        text: "Gravity, temperature, battery"
+        title: "Floating sensor (optional)"
+        text: "Like the iSpindel: gravity, temperature, battery"
+        link: wireless
+        x: 26
+        y: 63
     image: assets/img/product/device-with-ispindel.webp
     image_width: 480
     image_height: 480
-    alt: "BrewSpider controller with its temperature probe, pressure sensor, valve and an iSpindel"
-    caption: "Decides locally. Works offline."
+    alt: "BrewSpider controller with its temperature probe, pressure sensor, vent valve and an iSpindel, numbered as in the list"
+    caption: "The BrewSpider controller. Decides locally, works offline."
     outputs_label: "What BrewSpider switches"
     outputs:
-      - icon: flame
-        title: "Heater"
-        text: "Through a smart plug"
-      - icon: snowflake
-        title: "Fridge"
-        text: "Through a smart plug, compressor rest built in"
       - icon: valve
-        title: "Spunding valve"
-        text: "Vents in short pulses"
+        title: "Vent valve"
+        text: "Holds pressure with short pulses, closed without power"
+        link: wired
+        x: 87
+        y: 76
+      - plug: heat
+        title: "Heating smart plug"
+        text: "Your heater plugs into it"
+        link: wireless
+      - plug: cool
+        title: "Cooling smart plug"
+        text: "Your fridge plugs into it, compressor rest built in"
+        link: wireless
 
   features:
     - visual: temperature
       title: "Temperature control"
-      text: "Heats and cools to your target through two smart plugs, with a rest period that protects the fridge compressor. Choose the wired probe or the iSpindel as the sensor; the other one is the backup."
+      text: "Heats and cools to your target through two wireless smart plugs, with a rest period that protects the fridge compressor. Choose the wired probe or a floating sensor like the iSpindel; the other one is the backup."
       chart_label: "target"
     - visual: pressure
       title: "Pressure control"

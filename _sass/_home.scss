@@ -175,8 +175,22 @@
   svg { flex: none; }
 }
 
-// System diagram: inputs, device, outputs
+// System diagram: inputs, device, outputs. Wired parts get a line with a moving dot,
+// wireless ones radio waves; numbers match the markers on the photo.
 .system { padding-bottom: 48px; }
+
+.link-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 28px;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-soft);
+  > span { display: inline-flex; align-items: center; gap: 10px; }
+  .link { width: 40px; }
+}
 
 .system-diagram {
   display: flex;
@@ -194,13 +208,16 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  li { display: flex; align-items: center; gap: 14px; }
+  gap: 20px;
+  li { display: flex; align-items: center; }
+  li > .link { margin: 0 -28px 0 0; }
+  li > .link:first-child { margin: 0 0 0 -28px; }
 }
 
 .system-item {
+  position: relative;
   flex: 1;
-  padding: 16px 18px;
+  padding: 16px 18px 16px 22px;
   display: flex;
   gap: 14px;
   align-items: center;
@@ -209,8 +226,98 @@
   span { display: block; font-size: 14px; color: var(--text-soft); }
 }
 
+.part-number, .part-marker {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--button);
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.system-item .part-number {
+  display: grid;
+  position: absolute;
+  font-size: 14px;
+  color: #fff;
+  top: -10px;
+  left: -10px;
+}
+
+.part-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+}
+
+.link-tag {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 1px 10px;
+  border-radius: var(--pill);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  &.is-wired { background: var(--peach); color: var(--button-hover); }
+  &.is-wireless { background: #E3EEF8; color: #23558A; }
+}
+
+// The two kinds of connector
+.link {
+  position: relative;
+  flex: none;
+  width: 64px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.link-wired {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    margin-top: -1px;
+    background: var(--orange);
+  }
+  span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    border-radius: 50%;
+    background: var(--orange);
+  }
+}
+
+.link-wireless {
+  justify-content: flex-start;
+  padding-left: 4px;
+  gap: 2px;
+  span {
+    width: 10px;
+    border: 2.5px solid transparent;
+    border-right-color: var(--orange);
+    border-radius: 50%;
+    &:nth-child(1) { height: 12px; }
+    &:nth-child(2) { height: 20px; }
+    &:nth-child(3) { height: 28px; }
+  }
+}
+
 .system-centre {
-  flex: 0 1 300px;
+  flex: 0 1 380px;
   min-width: 0;
   margin: 0;
   display: flex;
@@ -221,18 +328,20 @@
 }
 
 .device-frame {
+  position: relative;
   border-radius: 36px;
   background: var(--brown);
-  padding: 28px;
-  img { width: 240px; }
+  padding: 24px;
+  img { width: 320px; }
 }
 
-// Below 900 px the three columns stack: the connectors would point nowhere, so hide them
+// Below 900 px the three columns stack: the connectors would point nowhere, so the
+// Wired/Wireless tags carry that instead
 @media (max-width: 900px) {
-  .system-diagram { flex-direction: column; align-items: stretch; }
+  .system-diagram { flex-direction: column; align-items: stretch; gap: 32px; }
   .system-centre { order: -1; flex-basis: auto; }
   .system-side { flex-basis: auto; }
-  .system .flow { display: none; }
+  .system-side .link { display: none; }
 }
 
 // Three feature cards
@@ -275,7 +384,7 @@
 
 .puff {
   position: absolute;
-  bottom: 74px;
+  bottom: 66px;
   left: calc(50% - 10px);
   width: 20px;
   height: 20px;
@@ -283,7 +392,7 @@
   border: 2px solid var(--orange);
   & + .puff {
     left: calc(50% + 8px);
-    bottom: 70px;
+    bottom: 62px;
     width: 12px;
     height: 12px;
     border-color: var(--gold);

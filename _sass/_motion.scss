@@ -22,27 +22,20 @@
   60%, 100% { stroke-dashoffset: 0; }
 }
 
-// Connector line: a dashed strip, twice as wide as its box, slides by one dash period
-.flow {
-  position: relative;
-  flex: none;
-  width: 48px;
-  height: 2px;
-  overflow: hidden;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -14px;
-    right: -14px;
-    background: repeating-linear-gradient(90deg, var(--orange) 0 5.6px, transparent 5.6px 14px);
-    animation: flow .9s linear infinite;
-  }
+// Wired connector: a dot travels along the line. Wireless: the waves light up in turn.
+.link-wired span { animation: travel 1.8s linear infinite; }
+@keyframes travel {
+  from { transform: translateX(0); opacity: 0; }
+  15%, 85% { opacity: 1; }
+  to { transform: translateX(56px); opacity: 0; }
 }
-@keyframes flow {
-  from { transform: translateX(0); }
-  to { transform: translateX(14px); }
+
+.link-wireless span { animation: wave 1.5s ease-in-out infinite; opacity: .25; }
+.link-wireless span:nth-child(2) { animation-delay: .25s; }
+.link-wireless span:nth-child(3) { animation-delay: .5s; }
+@keyframes wave {
+  0%, 100% { opacity: .25; }
+  40% { opacity: 1; }
 }
 
 .vent {
@@ -56,33 +49,14 @@
   95% { opacity: 0; transform: translateY(-26px) scale(1.2); }
 }
 
-// Glow: a ring behind the box grows and fades
-.glow {
-  position: relative;
-  isolation: isolate;
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    border-radius: inherit;
-    background: rgba(255, 122, 26, .45);
-    opacity: 0;
-    animation: glow 2.4s ease-out infinite;
-  }
-}
-@keyframes glow {
-  0% { opacity: 1; transform: scale(1); }
-  100% { opacity: 0; transform: scale(1.08); }
-}
-
 .js [data-animate]:not(.is-visible) {
-  .pulse, .float, .draw, .flow::before, .vent, .glow::before { animation-play-state: paused; }
+  .pulse, .float, .draw, .link span, .vent { animation-play-state: paused; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .pulse, .float, .draw, .flow::before, .vent, .glow::before { animation: none !important; }
+  .pulse, .float, .draw, .link span, .vent { animation: none !important; }
   .draw { stroke-dashoffset: 0; }
-  .vent, .glow::before { opacity: 0; }
+  .vent, .link-wired span { opacity: 0; }
+  .link-wireless span { opacity: 1; }
 }

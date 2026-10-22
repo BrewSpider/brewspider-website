@@ -24,7 +24,7 @@ en: &DEFAULT_EN
     section: features
     list:
       - title: "Temperature Control"
-        desc: "Holds your fermentation temperature by switching both a heater and a fridge, with a rest period that protects the fridge compressor. Choose the wired probe or an iSpindel as the sensor; the other one is the backup."
+        desc: "Holds your fermentation temperature by switching both a heater and a fridge through smart plugs, with a rest period that protects the fridge compressor. Choose the wired probe or an iSpindel as the sensor; the other one is the backup."
         icon: fas fa-temperature-high #icons in _data/icons.yml
       - title: "Pressure Control"
         desc: "A built-in spunding valve: set a target pressure and BrewSpider vents in short pulses to hold it, for naturally carbonated beer straight from the fermenter. If pressure ever nears your vessel's maximum, it vents regardless."
@@ -57,7 +57,7 @@ en: &DEFAULT_EN
     events:
       - title: "Set up your fermenter"
         year: ""
-        desc: "Place **BrewSpider** next to your fermenter. Fit the temperature probe, the pressure sensor and the valve to the fermenter, and connect your heater and fridge."
+        desc: "Place **BrewSpider** next to your fermenter. Fit the temperature probe, the pressure sensor and the valve to the fermenter, and plug your heater and fridge into smart plugs that BrewSpider switches on and off."
         image: assets/img/timeline/brewery_setup.webp
         alt:
       - title: "Connect it to Wi-Fi"

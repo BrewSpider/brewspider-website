@@ -192,14 +192,14 @@ en: &DEFAULT_EN
 
   about:
     eyebrow: "Who makes it"
-    title: "Built by a brewer and an engineer."
-    text: "We design the electronics, the firmware and the app ourselves, with safety first: the device keeps your brew under control even when the internet doesn't."
+    title: "Built by two engineers who brew."
+    text: "We are two engineers and homebrewers. We design the electronics, the firmware and the app ourselves, with safety first: the device keeps your brew under control even when the internet doesn't."
     people:
       - name: "Nader A."
         role: "Hardware, firmware and app"
         image: assets/img/team/1.jpg
       - name: "Roman D."
-        role: "Brewmaster, keeps it practical"
+        role: "Engineer and brewmaster, keeps it practical"
         image: assets/img/team/2.jpg
 
   # Path to release: no dates (no launch date anywhere). status: done, now or next.

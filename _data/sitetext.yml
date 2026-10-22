@@ -216,6 +216,8 @@ en: &DEFAULT_EN
         url: https://www.facebook.com/BrewSpider
       - title: "LinkedIn"
         url: https://www.linkedin.com/company/brewspider/
+      - title: "X"
+        url: https://twitter.com/Brew_Spider
     # TO CONFIRM: company name and organisation number, once registered.
     # company: ""
 en-US:

@@ -20,9 +20,9 @@ email      : contact@brewspider.com  #this is also the email contact forms will 
 description: "BrewSpider is a wireless fermentation controller for homebrewers: it holds temperature by switching your heater and fridge through smart plugs, holds pressure with a built-in spunding valve, reads your iSpindel and keeps working offline. Follow every batch in the app, or send it to Brewfather, Brewer's Friend or Grainfather."
 # author: not set, so jekyll-seo-tag adds no Person author or twitter:creator
 brand_logo:     # wordmark in the nav and footer (on dark); width/height are the file's pixels
-  path: assets/img/email/logo.png
-  width: 543
-  height: 100
+  path: assets/img/logo/wordmark.webp
+  width: 326
+  height: 60
 
 lang  : "en"
 locale: "en-US" # See available languages in _data/sitetext.yml

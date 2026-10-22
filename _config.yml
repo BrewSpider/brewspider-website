@@ -59,9 +59,10 @@ defaults:
     values:
       image: /assets/img/header-thumbnail.jpg
 
-exclude: ["LICENSE.txt", "README.md", "ToDoList.md", "Gemfile", "Gemfile.lock", "netlify.toml", ".ruby-version", ".vscode", "vendor"]
+exclude: ["LICENSE.txt", "README.md", "ToDoList.md", "Gemfile", "Gemfile.lock", "netlify.toml", ".ruby-version", ".vscode", "vendor", "*.csv"]
 markdown: kramdown
 
 sass:
   style: compressed
+  sourcemap: never
 

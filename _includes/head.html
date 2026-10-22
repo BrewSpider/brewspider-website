@@ -1,38 +1,17 @@
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#212529">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1C0B00">
 
   <!-- Title, description, canonical URL, Open Graph, X/Twitter card, structured data (jekyll-seo-tag) -->
   {% seo %}
 
-  <!-- Bootstrap core CSS -->
-  <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+  <!-- Fonts are self-hosted (_sass/_fonts.scss); both are used above the fold, so they load first -->
+  <link rel="preload" href="{{ '/assets/fonts/space-grotesk-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/inter-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
-  <!-- Fonts are self-hosted (_sass/base/_fonts.scss); the two used above the fold load first -->
-  <link rel="preload" href="{{ '/assets/fonts/montserrat-latin-700-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ '/assets/fonts/roboto-slab-latin-400-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link href="{{ '/assets/css/site.css' | relative_url }}" rel="stylesheet">
 
-  <!-- Custom styles for this theme -->
-  <link href="{{ '/assets/css/agency.css' | relative_url }}" rel="stylesheet">
-
-  {% if page.layout == "home" %}
-  <!-- Hero background: start downloading before the stylesheet asks for it -->
-  <link rel="preload" as="image" href="{{ '/assets/img/header-mobile.webp' | relative_url }}" media="(max-width: 767px)">
-  <link rel="preload" as="image" href="{{ '/assets/img/header.webp' | relative_url }}" media="(min-width: 768px)">
-  {% endif %}
-
-  <!-- Page container change top padding when nav shrinks -->
-  {% if page.layout == "page" %}
-  <style>
-    #pagecontainer {
-      padding-top: 150px;
-    }
-    @media only screen and (max-width: 991px) {
-      #pagecontainer {
-        padding-top: 100px;
-      }
-    }
-  </style>
-  {% endif %}
+  <!-- Lets the stylesheet fold the phone menu and hold animations only when site.js will run -->
+  <script>document.documentElement.classList.add("js")</script>
 </head>

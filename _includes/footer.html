@@ -1,48 +1,13 @@
-<!-- Footer -->
-<footer class="footer" id="footer" style="background-color: white">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-4">
-        <span class="copyright">Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span>
-      </div>
-      <!-- Social Media -->
-      <div class="col-md-4">
-        <ul class="list-inline social-buttons">
-          {% for link in site.data.sitetext[site.locale].footer.social %}
-          <li class="list-inline-item">
-            {% if link.url %}
-            <a href="{{ link.url }}" aria-label="{{ link.label }}">
-              {% if link.icon %}{% include icon.html name=link.icon %}{% endif %}
-            </a>
-            {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <!-- Legal -->
-      <div class="col-md-4">
-        <ul class="list-inline quicklinks">
-          <li class="list-inline-item">
-            <a href="{{ '/legal' | relative_url }}">{{ site.data.sitetext[site.locale].footer.legal | default:
-              "Privacy Policy" }}</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+{%- assign footer = site.data.sitetext[site.locale].footer -%}
+<footer class="site-footer on-dark">
+  <div class="footer-inner wrap">
+    <img src="{{ site.brand_logo.path | relative_url }}" alt="{{ site.title }}" width="{{ site.brand_logo.width }}" height="{{ site.brand_logo.height }}" loading="lazy">
+    <span>{{ footer.tagline }}</span>
+    <ul class="footer-links">
+      {%- for link in footer.links %}
+      <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+      {%- endfor %}
+    </ul>
+    <p class="footer-legal">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}{% if footer.company %} · {{ footer.company }}{% endif %}</p>
   </div>
 </footer>
-{% if page.layout == "page" %}
-<script>
-  fixPageShort();
-  function fixPageShort() {
-    if (window.innerHeight > document.body.offsetHeight) {
-      document.getElementById("footer").style.position = "fixed";
-      document.getElementById("footer").style.bottom = 0;
-      document.getElementById("footer").style.right = 0;
-      document.getElementById("footer").style.left = 0;
-      document.getElementById("footer").style.width = "100%";
-    }
-  }
-</script>
-{% endif %}
-<!-- End Footer -->

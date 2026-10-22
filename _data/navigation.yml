@@ -1,26 +1,20 @@
-#
-# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
-#
-# Configuration: Add to _config.yml
-# locale: "en-US"  [YOUR PREFERRED LOCALE]
-#
-# How to use:
-# {{ site.data.navigation[site.locale].nav.<var_name> | default: 'text' }}
-
-# English (default)
-# -----------------
+# Main navigation (sticky bar on every page). Section links point at the homepage,
+# so they work from the other pages too.
 en: &DEFAULT_EN
-  nav:
+  label: "Main"
+  skip: "Skip to content"
+  menu: "Menu"
+  links:
     - title: "Features"
-      section: features
-    - title: "How it Works"
-      section: timeline
-    - title: "About"
-      section: about
-    - title: "Team"
-      section: team
-    - title: "Contact"
-      section: contact
+      url: /#features
+    - title: "How it works"
+      url: /#how
+    - title: "App"
+      url: /#app
+    - title: "FAQ"
+      url: /#faq
+  cta:
+    title: "Get launch updates"
+    url: /#signup
 en-US:
   <<: *DEFAULT_EN
-

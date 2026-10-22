@@ -159,16 +159,36 @@ en: &DEFAULT_EN
 
   apps:
     title: "Already plan your brews somewhere else?"
-    text: "Paste a link in the app and BrewSpider sends your readings there every 15 minutes. Any app with a webhook works too."
+    text: "Connect your brewing app in the BrewSpider app: copy the link your brewing app gives you and paste it in. From then on our server sends it your readings (temperature, pressure, gravity and iSpindel battery) on its own, so your brew log fills itself."
+    more: "How to connect each app"
+    more_url: /brewing-apps/
     list:
       - name: "Brewfather"
         url: https://brewfather.app/?via=494298
-        logo: assets/img/clients/brewfather.png
+        logo: assets/img/clients/brewfather.webp
         logo_width: 199
         logo_height: 50
+        show_name: false
+        rate: "Every 15 minutes, the most Brewfather accepts"
       - name: "Brewer's Friend"
+        url: https://www.brewersfriend.com/
+        logo: assets/img/clients/brewersfriend.webp
+        logo_width: 54
+        logo_height: 56
+        show_name: true
+        rate: "Every 15 minutes, the most Brewer's Friend accepts"
       - name: "Grainfather"
-    other: "Webhook"
+        url: https://grainfather.com/
+        logo: assets/img/clients/grainfather.webp
+        logo_width: 123
+        logo_height: 56
+        show_name: false
+        rate: "Every 15 minutes"
+      - name: "Webhook"
+        url: /brewing-apps/#webhook
+        icon: arrow
+        show_name: true
+        rate: "Any other app (Home Assistant, Node-RED, Google Sheets): every 1 to 60 minutes, you choose"
 
   about:
     eyebrow: "Who makes it"

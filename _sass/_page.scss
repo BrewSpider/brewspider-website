@@ -14,3 +14,37 @@
 }
 
 .page-center { text-align: center; }
+
+.page {
+  ol { margin: 0 0 16px; padding-left: 22px; color: var(--text-muted); }
+  li { margin-bottom: 6px; }
+  strong { color: var(--text); }
+  code {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: .88em;
+    padding: 1px 5px;
+    border-radius: 5px;
+    background: var(--peach);
+    color: var(--text);
+  }
+  pre {
+    margin: 0 0 20px;
+    padding: 18px 20px;
+    overflow-x: auto;
+    border-radius: 12px;
+    background: var(--dark);
+    color: var(--on-dark);
+    font-size: 14px;
+    line-height: 1.5;
+    code { padding: 0; background: none; color: inherit; font-size: inherit; }
+  }
+  table {
+    width: 100%;
+    margin: 0 0 20px;
+    border-collapse: collapse;
+    font-size: 15px;
+  }
+  th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  th { color: var(--text); }
+  td { color: var(--text-muted); }
+}

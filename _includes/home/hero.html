@@ -1,9 +1,14 @@
 {%- assign hero = site.data.sitetext[site.locale].hero -%}
 <section class="hero on-dark" data-animate>
+  <picture class="hero-banner">
+    <source media="(max-width: 760px)" srcset="{{ hero.banner_mobile | relative_url }}" width="864" height="896">
+    <img src="{{ hero.banner | relative_url }}" alt="" width="1344" height="896">
+  </picture>
   <div class="hero-inner wrap">
     <div class="hero-text">
       <p class="hero-badge"><span class="dot pulse"></span>{{ hero.badge }}</p>
       <h1>{{ hero.title }}</h1>
+      <p class="hero-slogan">{{ hero.slogan }}</p>
       <p class="hero-lead">{{ hero.text }}</p>
       {% include launch-form.html id="hero" %}
       <p class="hero-note">
@@ -26,7 +31,7 @@
         </dl>
         <svg viewBox="0 0 220 44" width="100%" height="44" aria-hidden="true">
           <line x1="0" y1="26" x2="220" y2="26" stroke="#E0980B" stroke-width="1" stroke-dasharray="3 4"/>
-          <path class="draw" d="M0 6 C 30 8, 45 30, 70 30 S 110 22, 130 27 S 170 25, 190 26 S 210 26, 220 26" fill="none" stroke="#D45500" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="draw" d="M0 42 C 30 40, 45 21, 70 21 S 110 28, 130 25 S 170 27, 190 26 S 210 26, 220 26" fill="none" stroke="#D45500" stroke-width="2.5" stroke-linecap="round"/>
         </svg>
       </div>
     </div>

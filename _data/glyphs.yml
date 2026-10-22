@@ -9,3 +9,4 @@ hydrometer: '<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/
 flame: '<path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 1-8z"/>'
 snowflake: '<path d="M12 2v20M4.9 6.5l14.2 11M19.1 6.5L4.9 17.5"/><path d="M9 3.5l3 2 3-2M9 20.5l3-2 3 2"/>'
 valve: '<path d="M4 8l8 5-8 5zM20 8l-8 5 8 5z"/><path d="M12 13V5M9 5h6"/>'
+wireless: '<path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/>'

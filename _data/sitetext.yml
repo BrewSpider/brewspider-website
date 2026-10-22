@@ -10,7 +10,8 @@ en: &DEFAULT_EN
   hero:
     badge: "Wireless fermentation controller"
     title: "Temperature and pressure, held steady for every batch."
-    text: "BrewSpider switches your heater and fridge through smart plugs, holds pressure with a built-in spunding valve, reads your iSpindel, and keeps working when the Wi-Fi doesn't."
+    slogan: "Click. Brew. Cheers!"
+    text: "BrewSpider switches your heater and fridge through wireless smart plugs, holds pressure with a built-in spunding valve, reads floating sensors like the iSpindel, and keeps working when the Wi-Fi doesn't."
     note: "One email when pre-orders open. No spam."
     more:
       title: "See how it works"
@@ -19,6 +20,9 @@ en: &DEFAULT_EN
     image_width: 510
     image_height: 383
     alt: "The BrewSpider controller, an orange enclosure with a rounded corner"
+    # Background photo (the original site banner), dimmed behind the hero
+    banner: assets/img/hero/banner.webp
+    banner_mobile: assets/img/hero/banner-mobile.webp
     card:
       name: "Fermenter 1"
       status: "Live"
@@ -44,8 +48,10 @@ en: &DEFAULT_EN
     list:
       - icon: shield
         text: "Control runs on the device"
+      - icon: wireless
+        text: "Wireless plugs, fewer cables"
       - icon: flask
-        text: "iSpindel built in"
+        text: "Floating sensors like the iSpindel"
       - icon: arrow
         text: "Sends to Brewfather, Brewer's Friend, Grainfather"
       - icon: refresh

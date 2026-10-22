@@ -18,7 +18,7 @@ This policy explains what personal data {{ site.title }} collects when you visit
 
 **CONTACT FORM AND EMAIL**
 
-When you use the contact form we receive your name, email address, phone number and message. We use them only to answer you and to follow up on your question. The legal basis is our legitimate interest in answering messages sent to us (GDPR article 6.1 f).
+When you use the contact form we receive your name, email address and message, and your phone number if you choose to give it. We use them only to answer you and to follow up on your question. The legal basis is our legitimate interest in answering messages sent to us (GDPR article 6.1 f).
 
 The form is handled by our hosting provider Netlify, Inc., which stores the submission and forwards it to us by email. Netlify processes the data on our behalf under a data processing agreement; it may store data in the United States, covered by the EU Standard Contractual Clauses. We do not sell your data or use it for marketing without asking you first.
 

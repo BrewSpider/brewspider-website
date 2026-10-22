@@ -4,6 +4,7 @@
 // Core variables and mixins
 @import "base/variables.scss";
 @import "base/mixins.scss";
+@import "base/fonts.scss";
 
 // Custom colors
 $primary: {{ site.data.style.highlight | default: "#fed136" }} !default;

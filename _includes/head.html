@@ -1,19 +1,4 @@
 <head>
-  {% if site.analytics.google %}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "{{ site.analytics.google }}");
-  </script>
-  <!-- End Google Analytics -->
-  {% endif %}
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#212529">
@@ -24,10 +9,9 @@
   <!-- Bootstrap core CSS -->
   <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
 
-  <!-- Fonts (one request; Droid Serif was retired by Google, Noto Serif is its successor) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Nova+Round&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- Fonts are self-hosted (_sass/base/_fonts.scss); the two used above the fold load first -->
+  <link rel="preload" href="{{ '/assets/fonts/montserrat-latin-700-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/roboto-slab-latin-400-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
   <!-- Custom styles for this theme -->
   <link href="{{ '/assets/css/agency.css' | relative_url }}" rel="stylesheet">

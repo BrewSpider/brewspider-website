@@ -20,27 +20,27 @@ en: &DEFAULT_EN
 
   features:
     title: "Features"
-    text: "Step into the future of fermentation control"
+    text: "Temperature and pressure under control, all through fermentation"
     section: features
     list:
       - title: "Temperature Control"
-        desc: "Regulate your brew's temperature using both heating and cooling elements, ensuring your fermentation environment remains steady and ideal for optimal yeast activity"
-        icon: fas fa-temperature-high #find more at https://fontawesome.com/icons
+        desc: "Holds your fermentation temperature by switching both a heater and a fridge through smart plugs, with a rest period that protects the fridge compressor. Choose the wired probe or an iSpindel as the sensor; the other one is the backup."
+        icon: fas fa-temperature-high #icons in _data/icons.yml
       - title: "Pressure Control"
-        desc: "Elevate your brew with our pressure control feature. Achieve your desired carbonation levels by easily setting and adjusting pressure, giving you full control over your fermentation process."
+        desc: "A built-in spunding valve: set a target pressure and BrewSpider vents in short pulses to hold it, for naturally carbonated beer straight from the fermenter. If pressure ever nears your vessel's maximum, it vents regardless."
         icon: fas fa-gauge-high
       - title: "Control from Anywhere"
-        desc: "Whether you're at the brewery, on the couch, or even on the go, you can easily monitor and adjust fermentation settings with a few taps on your phone."
-        icon: fas fa-gamepad
+        desc: "Live readings, targets and a zoomable trend chart in the BrewSpider app on your phone, or in any web browser. Every fermentation is saved as a batch you can look back on or export as CSV."
+        icon: fas fa-mobile-screen-button
       - title: "Connects to [***iSpindel***](https://ispindel.de)"
-        desc: "It seamlessly integrates with the [**iSpindel**](https://ispindel.de), a wireless hydrometer and temperature sensor, allowing you to gather accurate data on your fermentation progress."
+        desc: "Your [**iSpindel**](https://ispindel.de) wireless hydrometer connects straight to BrewSpider, so you follow gravity, temperature and battery in the app, without extra hardware."
         icon: fas fa-vial
-      - title: "Connect to <a target='_blank' href='https://brewfather.app/?via=494298'><img src= 'assets/img/clients/brewfather.png' height='35' alt='Brewfather'></a>"
-        desc: "Display your data on the [**Brewfather**](https://brewfather.app/?via=494298) app, you can effortlessly post your data and track your brewing journey all in one place (including [**iSpindel**](https://ispindel.de) data)."
-        icon: fas fa-beer-mug-empty
-      - title: "User-Friendly Interface"
-        desc: "Fermentation controls are at your fingertips. Our intuitive interface simplifies the brewing process, allowing you to focus on what matters most: crafting exceptional beer."
-        icon: fas fa-circle-play
+      - title: "Keeps Working Offline"
+        desc: "All control runs on the device itself. If your Wi-Fi or internet drops, BrewSpider keeps regulating, stores its readings and sends them once it is back online."
+        icon: fas fa-shield-halved
+      - title: "Easy Setup"
+        desc: "Scan the QR code on the label with the app, hold the button for 5 seconds, and the app connects BrewSpider to your Wi-Fi over Bluetooth. Updates arrive over the air."
+        icon: fas fa-qrcode
 
   portfolio:
     title: "Updates"
@@ -50,39 +50,39 @@ en: &DEFAULT_EN
 
   timeline:
     title: "How it works"
-    text: "Automating Fermentation Control"
+    text: "From unboxing to your first batch"
     section: timeline
     # left is the default
     # start_align: "left"
     events:
-      - title: "Setup your Brewery"
+      - title: "Set up your fermenter"
         year: ""
-        desc: "Place the **BrewSpider** device in your fermentation area. Connect the heating element and fridge to their power corresponding sockets. Attach the temperature sensor, the pressure sensor and the pressure solenoid to your fermenter."
+        desc: "Place **BrewSpider** next to your fermenter. Fit the temperature probe, the pressure sensor and the valve to the fermenter, and plug your heater and fridge into smart plugs that BrewSpider switches on and off."
         image: assets/img/timeline/brewery_setup.webp
         alt:
-      - title: "Connect it to Wifi"
+      - title: "Connect it to Wi-Fi"
         year: ""
-        desc: "Download our app, find your device (Press the reset button for 10 seconds if needed). Follow the prompt to connect **BrewSpider** to your WiFi network."
+        desc: "Get the BrewSpider app, choose **Pair with QR code** and scan the label. Hold the button for 5 seconds and pick your Wi-Fi; the app does the rest over Bluetooth. No phone at hand? The device also has its own Wi-Fi setup page."
         image: assets/img/timeline/wifi.webp
         alt:
-      - title: "Connect iSpindel"
+      - title: "Connect your iSpindel"
         year: ""
-        desc: 'Login to your **iSpindel** setup page, select the WiFi SSID: **Brewspider_WiFi**, Server Address: **192.168.5.1**", Service Type: **http**, Server Port:**80**, Path: **/ispindel**. '
+        desc: 'Optional. In the **iSpindel** setup page choose the Wi-Fi network **BrewSpider-XXXX** (password on the label), Service Type **HTTP**, Server Address **192.168.4.1**, Port **80**, Path **/ispindel**. Then add it under Wireless sensors in the app.'
         image: assets/img/timeline/ispindel.webp
         alt:
-      - title: "Set your parameters"
+      - title: "Set your targets"
         year: ""
-        desc: "Specify your desired fermentation temperature and pressure settings through the the phone app or create custom settings tailored to your brew."
+        desc: "Enter the temperature and pressure you want. Brewing starts as a new batch, named however you like."
         image: assets/img/timeline/phone_app.webp
         alt:
-      - title: "Monitor & Adjust"
+      - title: "Monitor & adjust"
         year: ""
-        desc: "Keep an eye on your fermentation process in real-time from the app. If conditions need to be tweaked, make adjustments on the fly to ensure your brew is on the right track."
+        desc: "Follow temperature, pressure and gravity live, from anywhere. Change targets on the fly, or take over the heater, fridge and valve by hand in manual mode."
         image: assets/img/timeline/monitor.webp
         alt:
-      - title: "Data Integration"
+      - title: "Keep your data"
         year: ""
-        desc: "Setup **BrewSpider** to send all the data from its sensors, in addition to **iSpindel** data to your <a target='_blank' href='https://brewfather.app/?via=494298'><img src= 'assets/img/clients/brewfather.png' height='35' alt = 'BrewFather'></a> app for detailed analysis or sharing."
+        desc: "Each batch keeps its readings and events. Look back at its chart, or export to CSV for your brewing software. Sending data to <a target='_blank' rel='noopener' href='https://brewfather.app/?via=494298'><img src='assets/img/clients/brewfather.png' height='35' alt='Brewfather'></a> is coming."
         image: assets/img/timeline/integrate.webp
         alt:
         # you can enforce the alignment
@@ -92,13 +92,13 @@ en: &DEFAULT_EN
   about:
     title: "About Us"
     text: "Our story"
-    body: "At BrewSpider, we're passionate about great beer and innovative technology. Our startup is dedicated to revolutionizing the way homebrewers and small breweries approach the fermentation process. We've developed a cutting-edge device, also known as the BrewSpider, that empowers brewers with precision control over temperature and pressure during fermentation. With our user-friendly phone app, you can now manage your brewing process with ease, ensuring consistent and exceptional results every time."
+    body: "BrewSpider is a small controller that handles both temperature and pressure during fermentation, made for homebrewers and small breweries. We design the electronics, the firmware and the app ourselves, with safety first: the device keeps your brew under control even when the internet doesn't."
     section: about
 
   team:
     title: "Our Team"
-    text: "A diverse team of brewing enthusiasts and tech innovators is united by a shared passion for perfecting the art of fermentation"
-    subtext: Our dynamic duo forms the heart of BrewSpider, fusing technical expertise and brewing wisdom to drive the future of fermentation control.
+    text: "The people behind BrewSpider"
+    subtext: Nader builds the hardware, firmware and app; Roman brings the brewing experience and keeps an eye on what brewers actually need.
     section: team
     people:
       - name: "Nader A."
@@ -130,7 +130,7 @@ en: &DEFAULT_EN
 
   contact:
     title: "Contact Us"
-    text: "We're just an email away, don't hesitate to contact us"
+    text: "Questions, ideas, or want to hear when BrewSpider is available? Send us a message."
     section: contact
     name: "Name*"
     name-label: "Name (required)"

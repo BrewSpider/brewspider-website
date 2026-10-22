@@ -63,6 +63,13 @@
 }
 .js .how:not(.is-visible) .steps li { opacity: 0; transform: translateY(24px); }
 
+// Path to release: steps appear one after the other
+.js .roadmap .timeline-step {
+  transition: opacity .5s ease-out, transform .5s ease-out;
+  @for $i from 2 through 9 { &:nth-child(#{$i}) { transition-delay: #{($i - 1) * .1}s; } }
+}
+.js .roadmap:not(.is-visible) .timeline-step { opacity: 0; transform: translateY(20px); }
+
 .js [data-animate]:not(.is-visible) {
   .pulse, .float, .draw, .link span, .vent, .scan { animation-play-state: paused; }
 }
@@ -70,7 +77,8 @@
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .pulse, .float, .draw, .link span, .vent, .scan { animation: none !important; }
-  .js .how .steps li, .js .how:not(.is-visible) .steps li { transition: none; opacity: 1; transform: none; }
+  .js .how .steps li, .js .how:not(.is-visible) .steps li,
+  .js .roadmap .timeline-step, .js .roadmap:not(.is-visible) .timeline-step { transition: none; opacity: 1; transform: none; }
   .draw { stroke-dashoffset: 0; }
   .vent, .link-wired span { opacity: 0; }
   .link-wireless span { opacity: 1; }

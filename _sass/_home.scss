@@ -680,45 +680,93 @@
   a:hover { color: #fff; }
 }
 
-// Path to release: steps on a line, each with its status
+// Path to release: a line through icon nodes, cards on alternate sides (one side on phones).
+// The line is solid up to the step in progress, dashed after it.
 .roadmap { border-top: 1px solid var(--line); }
 
-.roadmap-steps {
-  margin: 0;
+.timeline {
+  --node: 48px;
+  --axis: 50%;
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px 24px;
-  @media (max-width: 760px) { grid-template-columns: 1fr; gap: 32px; }
+  @media (max-width: 760px) { --axis: 24px; }
 }
 
-.roadmap-step {
+.timeline-step {
   position: relative;
-  padding-top: 24px;
-  border-top: 3px solid var(--line-strong);
+  padding-bottom: 28px;
+  // the line from this node down to the next one
+  &::before {
+    content: "";
+    position: absolute;
+    left: var(--axis);
+    top: var(--node);
+    bottom: 0;
+    margin-left: -1.5px;
+    border-left: 3px solid var(--ok);
+  }
+  &.is-now::before { border-left: 3px dashed var(--line-strong); }
+  &.is-next::before, &.is-later::before { border-left: 3px dashed var(--line-strong); }
+  &:last-child::before { display: none; }
+}
+
+.timeline-node {
+  position: absolute;
+  left: var(--axis);
+  top: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: var(--node);
+  height: var(--node);
+  margin-left: calc(var(--node) / -2);
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--line-strong);
+  color: var(--text-soft);
+  .is-done & { background: var(--ok); border-color: var(--ok); color: #fff; }
+  .is-now & { background: var(--button); border-color: var(--button); color: #fff; }
+}
+
+.timeline-ring {
+  position: absolute;
+  inset: -9px;
+  border-radius: 50%;
+  border: 2px solid var(--orange);
+}
+
+.timeline-card {
+  width: calc(50% - 48px);
+  padding: 18px 22px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   h3 { font-size: 19px; line-height: 1.25; }
   p { font-size: 15px; color: var(--text-muted); }
-  &.is-done { border-top-color: var(--ok); }
-  &.is-now { border-top-color: var(--orange); }
-  &.is-next { border-top-style: dashed; }
+  .is-now & { border-color: var(--button); box-shadow: 0 12px 32px rgba(184, 74, 0, .12); }
+  .is-later & { background: transparent; border-style: dashed; }
 }
 
-.roadmap-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
+// wide screens: odd steps on the left, even on the right
+@media (min-width: 761px) {
+  .timeline-step:nth-child(odd) .timeline-card { text-align: right; align-items: flex-end; }
+  .timeline-step:nth-child(even) .timeline-card { margin-left: auto; }
+  .timeline-step + .timeline-step { margin-top: -56px; }
+}
+
+@media (max-width: 760px) {
+  .timeline-card { width: auto; margin-left: 64px; }
+}
+
+.timeline-status {
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: .04em;
+  letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--text-soft);
   .is-done & { color: var(--ok); }
-  .is-done & .dot { background: var(--ok); }
   .is-now & { color: var(--button); }
-  .is-now & .dot { background: var(--orange); }
-  .is-next & .dot { background: transparent; border: 2px solid var(--line-strong); }
 }

@@ -1,54 +1,30 @@
 ---
 caption: # What displays in the portfolio grid
-  title: Phone App V1.0
-  subtitle: Control Your Fermentation
+  title: The BrewSpider App
+  subtitle: Rebuilt from the ground up
   thumbnail: assets/img/product/app2.webp
-  
+
 # What displays when the item is clicked
-title: Phone App V1.0
-subtitle: Take Charge of Your Brew from Anywhere
+title: The BrewSpider App
+subtitle: Phone and web, one account
 image: assets/img/product/app2.webp
-alt: Phone App
+alt: BrewSpider app on a phone
 
 ---
 
-Introducing Phone App V1.0 – Your Brewmaster's Companion!
+The first app was a quick prototype. Its successor is a new app for Android (iOS is on the way), and the same app runs in any web browser.
 
-📱 **Control Your Fermentation with Ease:** 
+📶 **Setup in a minute:**
+Scan the QR code on the device label, hold the button for 5 seconds, and the app sends your Wi-Fi details over Bluetooth. The device is added to your account straight away.
 
-Our Phone App V1 is here to redefine your brewing experience. Take full control of your fermentation process from anywhere in the world with just a few taps on your smartphone.
+📊 **Live readings and trends:**
+Temperature, pressure and gravity update live while you watch. The trend chart zooms from the last 15 minutes to a whole month, with every sensor on its own scale.
 
-🌡️ **Temperature Management:**
+🍺 **Batches:**
+Every fermentation is saved as a batch with its readings and events. Look back at old batches, or export one as CSV.
 
-Achieve the perfect temperature for your brew with precise control at your fingertips. Monitor and adjust fermentation conditions effortlessly, ensuring your brew's success.
+🎛️ **Full control:**
+Set temperature and pressure targets, pick which temperature sensor to follow, calibrate the pressure sensor against your own gauge, or switch the heater, fridge and valve by hand in manual mode.
 
-💨 **Pressure Precision:**
-
-Fine-tune pressure settings like never before. Optimize your fermentation environment to produce the flavors you desire with precision and ease.
-
-📊 **Data at Your Fingertips:**
-
-Seamlessly integrate data from your BrewSpider and iSpindel devices. Monitor every aspect of your brew's progress in real-time with clear and insightful visualizations.
-
-🚀 **Coming Soon: Phone App V2 - Your Brewing Evolution:**
-
-Get ready for the future of fermentation control! In the next version of our app, you'll be able to:
-
-📝 **Create Custom Fermentation Steps:**
-
-Design your fermentation process with precision. Define each step to control temperature and pressure until a specific time has passed or a desired density is reached.
-
-🕒 **Set Timers and Milestones:**
-
-Never miss a crucial moment in your brew. Set timers and milestones to ensure your brew reaches perfection every time.
-
-🔄 **Iterate and Perfect:**
-
-Experiment, iterate, and perfect your brew recipes like never before. Our app empowers you to take your brewing skills to the next level.
-
-📅 **Stay Updated:**
-
-We're working tirelessly to bring you Phone App V2, and we can't wait to see what amazing brews you'll create with it. Stay tuned for updates on this exciting release.
-
-
-
+🔄 **Updates over the air:**
+New firmware installs from the app, and never in the middle of a running batch unless you say so.

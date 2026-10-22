@@ -12,7 +12,7 @@ alt: Explore the Future of Fermentation
 
 Discover the Future of Fermentation!
 
-We are proud to introduce the first-of-its-kind fermentation controller that combines precision pressure, heat, cooling control, density tracking, and remote device access. We're excited to announce that our initial prototype is now complete and fully functional!
+Our first prototype combines pressure control, heating and cooling, gravity tracking with the iSpindel, and remote access in one fermentation controller. It is complete and working, and it has been through its first field test with a brewer.
 
 🔥 **The Journey Begins:**
 Our team has been working hard to bring you this innovative solution. With the first prototype in hand, we're one step closer to transforming your brewing experience.

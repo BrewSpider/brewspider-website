@@ -40,7 +40,15 @@ en: &DEFAULT_EN
     label: "Email address"
     placeholder: "you@example.com"
     button: "Get launch updates"
-    sent: "Thanks! You're on the list. We'll email you when pre-orders open."
+    sent: "Almost done: check your inbox and confirm your address."
+    # Hidden fields: notification subject and what the signup is about
+    subject: "Launch list signup: send pre-order news"
+    interest: "Launch updates: email me when pre-orders open"
+    # /confirmed/: where the Brevo confirmation link lands
+    confirmed:
+      title: "You're on the list."
+      text: "Thanks for confirming. We'll email you when pre-orders open, and now and then when BrewSpider takes a real step forward. Every email has an unsubscribe link."
+      home: "Back to BrewSpider"
     failed: "Sorry, that didn't work. Please try again, or email contact@brewspider.com."
 
   highlights:
@@ -199,7 +207,7 @@ en: &DEFAULT_EN
         role: "Hardware, firmware and app"
         image: assets/img/team/1.jpg
       - name: "Roman D."
-        role: "Engineer and brewmaster, keeps it practical"
+        role: "Brewmaster, keeps it practical"
         image: assets/img/team/2.jpg
 
   # Path to release: no dates (no launch date anywhere). status: done, now, next or later.

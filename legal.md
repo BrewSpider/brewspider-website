@@ -25,9 +25,9 @@ We keep messages only as long as we need them to answer you, and delete them no 
 
 If you sign up for launch updates on the Site, we receive your email address. We use it to send you one email when pre-orders open, and occasional updates on how BrewSpider is coming along. The legal basis is your consent (GDPR article 6.1 a), which you can withdraw at any time.
 
-The sign-up is handled by Netlify, Inc., the same way as the contact form above: Netlify stores your address and passes it to us, under the same data processing agreement and safeguards.
+The sign-up is handled by Netlify, Inc., the same way as the contact form above: Netlify stores your address and passes it to us, under the same data processing agreement and safeguards. Netlify also passes your address to Brevo (Sendinblue SAS, France), which sends you a link to confirm the sign-up and, once you have confirmed, sends our launch emails. Brevo processes the data on our behalf under a data processing agreement and stores it in the EU. Until you click the link, you are not on the list.
 
-To unsubscribe, reply to any of our emails or write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>; we then delete your address from the list. Otherwise we keep it until you unsubscribe, and no longer than 12 months after pre-orders open; then we delete the list.
+To unsubscribe, use the link at the bottom of any of our emails, reply to one, or write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>; we then delete your address from the list. Otherwise we keep it until you unsubscribe, and no longer than 12 months after pre-orders open; then we delete the list.
 
 ## Cookies and statistics
 

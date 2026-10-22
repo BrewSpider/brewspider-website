@@ -6,10 +6,6 @@
     <p class="eyebrow">{{ sys.eyebrow }}</p>
     <h2 class="title">{{ sys.title }}</h2>
     <p class="lead">{{ sys.text }}</p>
-    <p class="link-legend" aria-hidden="true">
-      <span>{{ wired_line }}{{ sys.wired }}</span>
-      <span>{{ wireless_line }}{{ sys.wireless }}</span>
-    </p>
   </div>
 
   <div class="system-diagram">
@@ -20,7 +16,7 @@
         <div class="system-item card">
           <span class="part-number" aria-hidden="true">{{ n }}</span>
           {% include glyph.html name=item.icon size=28 color="#B84A00" stroke=1.8 %}
-          <div><strong>{{ item.title }}</strong><span>{{ item.text }}</span><em class="link-tag is-{{ item.link }}">{{ sys[item.link] }}</em></div>
+          <div><strong>{{ item.title }}</strong><span>{{ item.text }}</span><em class="link-tag is-{{ item.link }}">{% if item.link == "wired" %}{{ wired_line }}{% else %}{{ wireless_line }}{% endif %}<span class="link-word">{{ sys[item.link] }}</span></em></div>
         </div>
         {% if item.link == "wired" %}{{ wired_line }}{% else %}{{ wireless_line }}{% endif %}
       </li>
@@ -48,7 +44,7 @@
         <div class="system-item card">
           <span class="part-number" aria-hidden="true">{{ n }}</span>
           {% if item.plug %}{% include plug.html kind=item.plug size=34 %}{% else %}{% include glyph.html name=item.icon size=28 color="#B84A00" stroke=1.8 %}{% endif %}
-          <div><strong>{{ item.title }}</strong><span>{{ item.text }}</span><em class="link-tag is-{{ item.link }}">{{ sys[item.link] }}</em></div>
+          <div><strong>{{ item.title }}</strong><span>{{ item.text }}</span><em class="link-tag is-{{ item.link }}">{% if item.link == "wired" %}{{ wired_line }}{% else %}{{ wireless_line }}{% endif %}<span class="link-word">{{ sys[item.link] }}</span></em></div>
         </div>
       </li>
       {%- endfor %}

@@ -10,20 +10,26 @@
 	  {% include footer.html %}
 
 	  <!-- Bootstrap core JavaScript -->
-	  <script src="assets/js/jquery.min.js"></script>
-	  <script src="assets/js/bootstrap.bundle.min.js"></script>
+	  <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+	  <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 
 	  <!-- Plugin JavaScript -->
-	  <script src="assets/js/jquery.easing.min.js"></script>
+	  <script src="{{ '/assets/js/jquery.easing.min.js' | relative_url }}"></script>
 
 	  <!-- Contact form JavaScript -->
-	  <script src="assets/js/jqBootstrapValidation.js"></script>
-	  <script src="assets/js/contact_me.js"></script>
+	  {% if page.layout == "home" %}
+	  <script src="{{ '/assets/js/contact_me.js' | relative_url }}"></script>
+	  {% endif %}
 
 	  <!-- Custom scripts for this template -->
-	  <script src="assets/js/agency.min.js"></script>
-	  {% if site.data.sitetext[site.locale].clients.horizontal-scrolling == "yes" %} 
-	  <script src="assets/js/clients.js"></script>
+	  <script src="{{ '/assets/js/agency.min.js' | relative_url }}"></script>
+	  {% if page.layout == "home" and site.data.sitetext[site.locale].clients.horizontal-scrolling == "yes" %}
+	  <script src="{{ '/assets/js/clients.js' | relative_url }}"></script>
+	  {% endif %}
+
+	  {% if site.analytics.cloudflare_token and site.analytics.cloudflare_token != "" %}
+	  <!-- Cloudflare Web Analytics: cookie-free, no personal data stored -->
+	  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analytics.cloudflare_token }}"}'></script>
 	  {% endif %}
 
   </body>

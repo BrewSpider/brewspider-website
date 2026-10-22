@@ -15,21 +15,49 @@ url    : "https://brewspider.com" # the base hostname & protocol for your site, 
 baseurl: "" # the subpath of your site, e.g. /blog
 
 title      : BrewSpider
+tagline    : "Wireless fermentation controller"
 email      : contact@brewspider.com  #this is also the email contact forms will go to
 description: "The ultimate fermentation control solution. Achieve precision temperature and pressure control, monitor from anywhere, and seamlessly connect with iSpindel and Brewfather for exceptional brewing results. Discover simplicity and innovation in every batch."
-author     : Nader
-logo:     #optional, defaults to site title
+# author: not set, so jekyll-seo-tag adds no Person author or twitter:creator
+brand_logo:     #navbar logo, optional, defaults to site title
   path: assets/img/logo/logo.svg
   height: 40 #height in px, defaults to 52px
 
+lang  : "en"
 locale: "en-US" # See available languages in _data/sitetext.yml
 
+# Cookie-free visitor statistics (no consent banner needed). Cloudflare Web Analytics:
+# dash.cloudflare.com -> Analytics & Logs -> Web Analytics -> Add a site -> copy the token from the snippet.
+# Empty = no analytics at all. Google Analytics was removed (it set cookies without consent).
 analytics:
-  google: G-FVBGVXLLML
+  cloudflare_token: ""
 
 collections:
   portfolio:
 
-exclude: ["LICENSE.txt", "README.md", "ToDoList.md"]
+# jekyll-seo-tag: title, description, canonical URL, Open Graph, X/Twitter card, structured data
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+twitter:
+  username: Brew_Spider
+  card: summary_large_image
+
+social:
+  name: BrewSpider
+  links:
+    - https://twitter.com/Brew_Spider
+    - https://www.facebook.com/BrewSpider
+    - https://www.linkedin.com/company/brewspider/
+    - https://www.instagram.com/brewspider/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/header-thumbnail.jpg
+
+exclude: ["LICENSE.txt", "README.md", "ToDoList.md", "Gemfile", "Gemfile.lock", "netlify.toml", ".ruby-version", ".vscode", "vendor"]
 markdown: kramdown
 

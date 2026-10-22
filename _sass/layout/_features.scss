@@ -3,3 +3,16 @@
   margin: 15px 0;
   text-transform: none;
 }
+
+// Orange circle with a white icon (was a Font Awesome fa-stack fa-3x)
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  color: $white;
+  background-color: $primary;
+  font-size: 48px;
+}

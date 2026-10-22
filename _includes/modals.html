@@ -1,6 +1,6 @@
 <!-- Portfolio Modals -->
 {% for project in site.portfolio %}
-<div class="portfolio-modal modal fade" id="p{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="portfolio-modal modal fade" id="p{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="p{{ forloop.index }}-title">
   <div class="modal-dialog">
     <div class="modal-content">
 
@@ -15,12 +15,13 @@
           <div class="col-lg-8 mx-auto">
             <div class="modal-body">
               <!-- Project Details Go Here -->
-              <h3 class="text-uppercase">{{ project.title }}</h3>
+              <h3 class="text-uppercase" id="p{{ forloop.index }}-title">{{ project.title }}</h3>
               <p class="item-intro text-muted">{{ project.subtitle }}</p>
-              <img class="img-fluid d-block mx-auto" src="{{ project.image }}" alt="{{ project.alt }}" />
-              <p>{{ project.content }}</p>
+              <img class="img-fluid d-block mx-auto" src="{{ project.image | relative_url }}" alt="{{ project.alt }}"
+                width="1080" height="1080" loading="lazy">
+              {{ project.content }}
               <button class="btn btn-primary" data-dismiss="modal" type="button">
-                <i class="fas fa-times"></i>
+                {% include icon.html name="fas fa-xmark" %}
                 {{ site.data.sitetext[site.locale].portfolio.closebutton |
                 default: "Close Project" }}
               </button>

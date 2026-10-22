@@ -32,12 +32,15 @@
             {% endif %}
             {%- endif -%}
             <div class="timeline-image">
-              <img class="rounded-circle img-fluid" src="{{ event.image }}" alt="{{ event.alt | default: ''}}">
+              <img class="rounded-circle img-fluid" src="{{ event.image | relative_url }}" alt="{{ event.alt | default: '' }}"
+                width="200" height="200" loading="lazy">
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4>{{ event.year | markdownify }}</h4>
-                <h4 class="subheading">{{ event.title }}</h4>
+                {%- if event.year and event.year != "" %}
+                <h4>{{ event.year }}</h4>
+                {%- endif %}
+                <h3 class="h4 subheading">{{ event.title }}</h3>
               </div>
               <div class="timeline-body">
                 <div class="text-muted">{{ event.desc | markdownify }}</div>
@@ -49,7 +52,7 @@
           {% if site.data.sitetext[site.locale].timeline.end %}
           <li class="timeline-inverted">
             <div class="timeline-image">
-              <h4>{{ site.data.sitetext[site.locale].timeline.end }}</h4>
+              <p class="h4">{{ site.data.sitetext[site.locale].timeline.end }}</p>
             </div>
           </li>
           {% endif %}

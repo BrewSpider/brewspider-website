@@ -24,7 +24,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h4 {
   font-weight: 700;
   @include heading-font;
 }
@@ -68,4 +69,17 @@ img::selection {
 
 img::-moz-selection {
   background: transparent;
+}
+
+// Inline SVG icons (_includes/icon.html), sized like the Font Awesome glyphs they replace
+.icon {
+  display: inline-block;
+  height: 1em;
+  width: auto;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+
+.icon-3x {
+  font-size: 3em;
 }

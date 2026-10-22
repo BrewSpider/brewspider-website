@@ -11,8 +11,8 @@
           {% for link in site.data.sitetext[site.locale].footer.social %}
           <li class="list-inline-item">
             {% if link.url %}
-            <a href="{{ link.url }}">
-              {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
+            <a href="{{ link.url }}" aria-label="{{ link.label }}">
+              {% if link.icon %}{% include icon.html name=link.icon %}{% endif %}
             </a>
             {% endif %}
           </li>
@@ -23,7 +23,7 @@
       <div class="col-md-4">
         <ul class="list-inline quicklinks">
           <li class="list-inline-item">
-            <a href="legal">{{ site.data.sitetext[site.locale].footer.legal | default:
+            <a href="{{ '/legal' | relative_url }}">{{ site.data.sitetext[site.locale].footer.legal | default:
               "Privacy Policy" }}</a>
           </li>
         </ul>

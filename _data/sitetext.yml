@@ -14,6 +14,7 @@ en: &DEFAULT_EN
     title: Precision Brewing Simplified
     text: Click. Brew. Cheers!
     image: assets/img/product/product.webp
+    alt: "BrewSpider fermentation controller"
     button: Learn More
     buttonlink: "#features"
 
@@ -68,12 +69,12 @@ en: &DEFAULT_EN
         year: ""
         desc: 'Login to your **iSpindel** setup page, select the WiFi SSID: **Brewspider_WiFi**, Server Address: **192.168.5.1**", Service Type: **http**, Server Port:**80**, Path: **/ispindel**. '
         image: assets/img/timeline/ispindel.webp
-        alt: image alt text
+        alt:
       - title: "Set your parameters"
         year: ""
         desc: "Specify your desired fermentation temperature and pressure settings through the the phone app or create custom settings tailored to your brew."
         image: assets/img/timeline/phone_app.webp
-        alt: image alt text
+        alt:
       - title: "Monitor & Adjust"
         year: ""
         desc: "Keep an eye on your fermentation process in real-time from the app. If conditions need to be tweaked, make adjustments on the fly to ensure your brew is on the right track."
@@ -104,62 +105,73 @@ en: &DEFAULT_EN
         role: "Technical Innovator & Programmer"
         image: assets/img/team/1.jpg
         social:
-          - url: https://twitter.com
-            icon: fab fa-x-twitter
           - url: https://github.com/alghazu
             icon: fab fa-github
-          - url: www.linkedin.com/in/alghazu
+            label: GitHub
+          - url: https://www.linkedin.com/in/alghazu
             icon: fab fa-linkedin-in
+            label: LinkedIn
           - url: mailto:nader@brewspider.com
             icon: fas fa-envelope
+            label: Email
       - name: "Roman D."
         role: "Brewmaster & Market Analyst"
         image: assets/img/team/2.jpg
         social:
           - url: https://www.facebook.com/roman.demchenko.9
             icon: fab fa-facebook-f
+            label: Facebook
           - url: https://www.linkedin.com/in/demchenkoroman/
             icon: fab fa-linkedin-in
+            label: LinkedIn
           - url: mailto:roman@brewspider.com
             icon: fas fa-envelope
+            label: Email
 
   contact:
     title: "Contact Us"
     text: "We're just an email away, don't hesitate to contact us"
     section: contact
     name: "Name*"
+    name-label: "Name (required)"
     name-validation: "Please enter your name."
     email: "Email*"
+    email-label: "Email (required)"
+    email-invalid: "Please enter a valid email address."
     email-validation: "Please enter your email address."
-    phone: "Phone Number*"
-    phone-validation: "Please enter your phone number."
+    phone: "Phone number (optional)"
+    phone-label: "Phone number (optional)"
     message: "Message*"
+    message-label: "Message (required)"
     message-validation: "Please enter a message."
     subject: "Contact Form Submission"
     submit: "Send Message"
+    sent: "Your message has been sent."
+    failed: "Sorry, your message could not be sent. Please try again later or email us."
 
   clients:
     section: clients
     max-height: 30px
-    horizontal-scrolling: "yes" #"yes/no"
+    horizontal-scrolling: "no" #"yes/no"; a single logo doesn't need to scroll
     list:
       - title: "BrewFather"
         url: https://brewfather.app/?via=494298
         logo: assets/img/clients/brewfather.png
-      - title: "Öl & Bröd"
-        url:
-        logo: assets/img/clients/olandbrod.png
 
   footer:
     legal: "Privacy Policy"
     social:
       - url: https://twitter.com/Brew_Spider
         icon: "fab fa-x-twitter"
+        label: "BrewSpider on X"
       - url: https://www.facebook.com/BrewSpider
         icon: "fab fa-facebook-f"
+        label: "BrewSpider on Facebook"
       - url: https://www.linkedin.com/company/brewspider/
         icon: "fab fa-linkedin-in"
+        label: "BrewSpider on LinkedIn"
       - url: https://www.instagram.com/brewspider/
         icon: "fab fa-instagram"
+        label: "BrewSpider on Instagram"
 en-US:
   <<: *DEFAULT_EN

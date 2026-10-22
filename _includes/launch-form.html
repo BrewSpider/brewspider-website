@@ -1,0 +1,13 @@
+{%- comment -%}
+  Launch-list signup (Netlify form "launch-list"; the hero and the bottom band use the same name).
+  include.id: unique prefix for the field ids on the page.
+{%- endcomment -%}
+{%- assign launch = site.data.sitetext[site.locale].launch -%}
+<form class="signup-form" name="launch-list" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="launch-list">
+  <p class="honeypot" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+  <label class="visually-hidden" for="{{ include.id }}-email">{{ launch.label }}</label>
+  <input id="{{ include.id }}-email" name="email" type="email" required placeholder="{{ launch.placeholder }}" autocomplete="email">
+  <button class="button button-lg" type="submit">{{ launch.button }}</button>
+  <p class="form-status" role="status" aria-live="polite" data-sent="{{ launch.sent | escape }}" data-failed="{{ launch.failed | escape }}"></p>
+</form>

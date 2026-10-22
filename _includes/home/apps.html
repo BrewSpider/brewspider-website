@@ -1,0 +1,21 @@
+{%- assign apps = site.data.sitetext[site.locale].apps -%}
+<section class="apps" aria-labelledby="apps-title">
+  <div class="apps-inner wrap">
+    <div class="apps-text">
+      <h2 id="apps-title">{{ apps.title }}</h2>
+      <p class="lead">{{ apps.text }}</p>
+    </div>
+    <ul class="apps-list">
+      {%- for a in apps.list %}
+      <li>
+        {%- if a.url -%}
+        <a href="{{ a.url }}" rel="noopener">{% if a.logo %}<img src="{{ a.logo | relative_url }}" alt="{{ a.name }}" width="{{ a.logo_width }}" height="{{ a.logo_height }}" loading="lazy">{% else %}{{ a.name }}{% endif %}</a>
+        {%- else -%}
+        <span>{{ a.name }}</span>
+        {%- endif -%}
+      </li>
+      {%- endfor %}
+      <li><span class="apps-other">{{ apps.other }}</span></li>
+    </ul>
+  </div>
+</section>

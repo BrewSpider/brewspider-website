@@ -1,0 +1,41 @@
+{%- assign sys = site.data.sitetext[site.locale].system -%}
+<section class="system section wrap" id="features" data-animate>
+  <div class="section-head">
+    <p class="eyebrow">{{ sys.eyebrow }}</p>
+    <h2 class="title">{{ sys.title }}</h2>
+    <p class="lead">{{ sys.text }}</p>
+  </div>
+
+  <div class="system-diagram">
+    <ul class="system-side" aria-label="{{ sys.inputs_label }}">
+      {%- for item in sys.inputs %}
+      <li>
+        <div class="system-item card">
+          {% include glyph.html name=item.icon size=28 color="#B84A00" stroke=1.8 %}
+          <div><strong>{{ item.title }}</strong><span>{{ item.text }}</span></div>
+        </div>
+        <span class="flow" aria-hidden="true"></span>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <figure class="system-centre">
+      <div class="device-frame glow">
+        <img src="{{ sys.image | relative_url }}" alt="{{ sys.alt }}" width="{{ sys.image_width }}" height="{{ sys.image_height }}" loading="lazy">
+      </div>
+      <figcaption>{{ sys.caption }}</figcaption>
+    </figure>
+
+    <ul class="system-side" aria-label="{{ sys.outputs_label }}">
+      {%- for item in sys.outputs %}
+      <li>
+        <span class="flow" aria-hidden="true"></span>
+        <div class="system-item card">
+          {% include glyph.html name=item.icon size=28 color="#B84A00" stroke=1.8 %}
+          <div><strong>{{ item.title }}</strong><span>{{ item.text }}</span></div>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

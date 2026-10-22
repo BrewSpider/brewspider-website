@@ -64,7 +64,6 @@
   flex-basis: 100%;
   font-size: 15px;
   font-weight: 500;
-  &:empty { display: none; }
   &.is-ok { color: #9FE0B0; }
   &.is-error { color: #FFB49A; }
 }

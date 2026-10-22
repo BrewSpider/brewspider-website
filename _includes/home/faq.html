@@ -1,0 +1,12 @@
+{%- assign faq = site.data.sitetext[site.locale].faq -%}
+<section class="faq" id="faq">
+  <div class="faq-inner section wrap">
+    <h2 class="title">{{ faq.title }}</h2>
+    {%- for item in faq.items %}
+    <details class="faq-item card"{% if item.open %} open{% endif %}>
+      <summary>{{ item.q }}</summary>
+      <p>{{ item.a }}</p>
+    </details>
+    {%- endfor %}
+  </div>
+</section>

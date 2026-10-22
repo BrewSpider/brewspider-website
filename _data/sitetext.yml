@@ -124,7 +124,7 @@ en: &DEFAULT_EN
     eyebrow: "The BrewSpider app"
     title: "Every batch, live on your phone."
     text: "Live readings, targets and a zoomable trend chart on Android, or in any web browser. iOS is on the way."
-    image: assets/img/product/app-status.webp
+    image: assets/img/product/app-status-2.webp  # new name: images are cached a week, a changed file needs a new name
     image_width: 600
     image_height: 1298
     alt: "BrewSpider app status screen: heater off, cooling, valve closed, temperature 13.0 and 12.3 °C, pressure 0.99 bar, gravity 1.042"
@@ -192,8 +192,8 @@ en: &DEFAULT_EN
 
   about:
     eyebrow: "Who makes it"
-    title: "Built by two engineers who brew."
-    text: "We are two engineers and homebrewers. We design the electronics, the firmware and the app ourselves, with safety first: the device keeps your brew under control even when the internet doesn't."
+    title: "Built by engineers and brewers."
+    text: "We design the electronics, the firmware and the app ourselves, with safety first: the device keeps your brew under control even when the internet doesn't."
     people:
       - name: "Nader A."
         role: "Hardware, firmware and app"

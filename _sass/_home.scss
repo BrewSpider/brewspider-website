@@ -179,19 +179,6 @@
 // wireless ones radio waves; numbers match the markers on the photo.
 .system { padding-bottom: 48px; }
 
-.link-legend {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 28px;
-  margin-top: 4px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-soft);
-  > span { display: inline-flex; align-items: center; gap: 10px; }
-  .link { width: 40px; }
-}
-
 .system-diagram {
   display: flex;
   flex-wrap: wrap;
@@ -266,6 +253,7 @@
   font-weight: 600;
   &.is-wired { background: var(--peach); color: var(--button-hover); }
   &.is-wireless { background: #E3EEF8; color: #23558A; }
+  .link { display: none; } // the animation replaces the word on phones (below)
 }
 
 // The two kinds of connector
@@ -341,7 +329,22 @@
   .system-diagram { flex-direction: column; align-items: stretch; gap: 32px; }
   .system-centre { order: -1; flex-basis: auto; }
   .system-side { flex-basis: auto; }
-  .system-side .link { display: none; }
+  // The connector lines can't reach the photo here: each card shows its animation instead of the word
+  .system-side li > .link { display: none; }
+  .link-tag {
+    display: flex; // no empty line-box space under the animation
+    padding: 0;
+    &.is-wired, &.is-wireless { background: none; }
+    .link { display: flex; }
+  }
+  .link-word {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
 }
 
 // Three feature cards

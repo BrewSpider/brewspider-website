@@ -5,6 +5,10 @@
 {%- assign launch = site.data.sitetext[site.locale].launch -%}
 <form class="signup-form" name="launch-list" method="POST" data-netlify="true" netlify-honeypot="bot-field">
   <input type="hidden" name="form-name" value="launch-list">
+  {%- comment -%} So the notification and the CSV say what a signup is; netlify/functions/submission-created.mjs sends it on to Brevo. {%- endcomment %}
+  <input type="hidden" name="subject" value="{{ launch.subject }}">
+  <input type="hidden" name="interest" value="{{ launch.interest }}">
+  <input type="hidden" name="source" value="{{ include.id }}">
   <p class="honeypot" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
   <label class="visually-hidden" for="{{ include.id }}-email">{{ launch.label }}</label>
   <input id="{{ include.id }}-email" name="email" type="email" required placeholder="{{ launch.placeholder }}" autocomplete="email">

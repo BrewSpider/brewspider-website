@@ -8,6 +8,10 @@
   # Netlify Agent Runners need Node 22+; the site build itself does not use Node.
   NODE_VERSION = "22"
 
+# submission-created.mjs runs on every form submission (launch list -> Brevo)
+[functions]
+  directory = "netlify/functions"
+
 [[headers]]
   for = "/*"
   [headers.values]

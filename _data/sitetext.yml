@@ -143,10 +143,13 @@ en: &DEFAULT_EN
     title: "From unboxing to your first batch"
     steps:
       - title: "Fit it to your fermenter"
-        text: "Fit the temperature probe, pressure sensor and valve. Plug your heater and fridge into smart plugs."
+        icon: wrench
+        text: "Fit the temperature probe, pressure sensor and valve. Plug your heater and fridge into the wireless smart plugs."
       - title: "Scan the label"
+        icon: qr
         text: "In the app, choose Pair with QR code, hold the button for 5 seconds and pick your Wi-Fi. The app does the rest over Bluetooth."
       - title: "Set your targets"
+        icon: sliders
         text: "Enter the temperature and pressure you want. Brewing starts as a new batch, named however you like."
     # TO CONFIRM: the manual's public URL. Shown under the steps once set.
     # more:

@@ -49,13 +49,28 @@
   95% { opacity: 0; transform: translateY(-26px) scale(1.2); }
 }
 
+.scan { animation: scan 2.2s ease-in-out infinite; }
+@keyframes scan {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(30px); }
+}
+
+// How it works: the steps rise in one after the other
+.js .how .steps li {
+  transition: opacity .6s ease-out, transform .6s ease-out;
+  &:nth-child(2) { transition-delay: .15s; }
+  &:nth-child(3) { transition-delay: .3s; }
+}
+.js .how:not(.is-visible) .steps li { opacity: 0; transform: translateY(24px); }
+
 .js [data-animate]:not(.is-visible) {
-  .pulse, .float, .draw, .link span, .vent { animation-play-state: paused; }
+  .pulse, .float, .draw, .link span, .vent, .scan { animation-play-state: paused; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .pulse, .float, .draw, .link span, .vent { animation: none !important; }
+  .pulse, .float, .draw, .link span, .vent, .scan { animation: none !important; }
+  .js .how .steps li, .js .how:not(.is-visible) .steps li { transition: none; opacity: 1; transform: none; }
   .draw { stroke-dashoffset: 0; }
   .vent, .link-wired span { opacity: 0; }
   .link-wireless span { opacity: 1; }

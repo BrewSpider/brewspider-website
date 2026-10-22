@@ -485,6 +485,34 @@
   p { color: var(--text-muted); }
 }
 
+.step-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--tint);
+  overflow: hidden;
+}
+
+// a scan line over the QR code
+.scan {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 14px;
+  height: 2px;
+  background: var(--orange);
+  box-shadow: 0 0 6px var(--orange);
+}
+
 .step-number {
   font-family: var(--font-head);
   font-size: 44px;

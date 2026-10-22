@@ -30,7 +30,7 @@ en: &DEFAULT_EN
         desc: "A built-in spunding valve: set a target pressure and BrewSpider vents in short pulses to hold it, for naturally carbonated beer straight from the fermenter. If pressure ever nears your vessel's maximum, it vents regardless."
         icon: fas fa-gauge-high
       - title: "Control from Anywhere"
-        desc: "Live readings, targets and a zoomable trend chart in the BrewSpider app on your phone, or in any web browser. Every fermentation is saved as a batch you can look back on or export as CSV."
+        desc: "Live readings, targets and a zoomable trend chart in the BrewSpider app on your phone, or in any web browser. Every fermentation is saved as a batch you can look back on or export as CSV, and the readings can go to Brewfather, Brewer's Friend or Grainfather too."
         icon: fas fa-mobile-screen-button
       - title: "Connects to [***iSpindel***](https://ispindel.de)"
         desc: "Your [**iSpindel**](https://ispindel.de) wireless hydrometer connects straight to BrewSpider, so you follow gravity, temperature and battery in the app, without extra hardware."
@@ -82,7 +82,7 @@ en: &DEFAULT_EN
         alt:
       - title: "Keep your data"
         year: ""
-        desc: "Each batch keeps its readings and events. Look back at its chart, or export to CSV for your brewing software. Sending data to <a target='_blank' rel='noopener' href='https://brewfather.app/?via=494298'><img src='assets/img/clients/brewfather.png' height='35' alt='Brewfather'></a> is coming."
+        desc: "Each batch keeps its readings and events. Look back at its chart, or export to CSV. Already plan your brews in <a target='_blank' rel='noopener' href='https://brewfather.app/?via=494298'><img src='assets/img/clients/brewfather.png' height='35' alt='Brewfather'></a>, **Brewer's Friend** or **Grainfather**? Paste its link under **Brewing apps** in the app, and BrewSpider sends your readings there every 15 minutes. Any other app with a webhook (Home Assistant, Node-RED, Google Sheets) works too."
         image: assets/img/timeline/integrate.webp
         alt:
         # you can enforce the alignment

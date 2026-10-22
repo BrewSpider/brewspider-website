@@ -1,0 +1,43 @@
+// Colours, type and spacing as custom properties. Orange #D45500 is decoration only:
+// text and buttons use the darker #B84A00, which passes contrast with white text.
+:root {
+  --dark: #1C0B00;
+  --darker: #140800;
+  --brown: #2B1100;
+  --cream: #FFF8F2;
+  --tint: #FFF3EA;
+  --peach: #FFE6D5;
+  --orange: #D45500;
+  --button: #B84A00;
+  --button-hover: #8A3700;
+  --gold: #E0980B;
+  --ok: #1E7A3A;
+
+  --line: #F1DCCD;
+  --line-strong: #D9B9A3;
+  --text: #2B1100;
+  --text-muted: #5C3D2B;
+  --text-soft: #6B4A36;
+  --text-on-peach: #4A2E1E;
+  --on-dark: #FFF3EA;
+  --on-dark-muted: #EBD3C2;
+  --on-dark-soft: #CBB2A1;
+  --on-dark-link: #FFCCAA;
+  --nav-link: #F3DCCB;
+  --footer-soft: #A88B78;
+
+  --font-head: "Space Grotesk", system-ui, sans-serif;
+  --font-body: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --wrap: 1200px;
+  --gutter: 24px;
+  --section: 112px;
+  --nav-height: 72px;
+  --radius: 16px;
+  --pill: 999px;
+
+  @media (max-width: 760px) {
+    --section: 80px;
+    --nav-height: 64px;
+  }
+}

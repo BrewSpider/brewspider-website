@@ -61,3 +61,6 @@ defaults:
 exclude: ["LICENSE.txt", "README.md", "ToDoList.md", "Gemfile", "Gemfile.lock", "netlify.toml", ".ruby-version", ".vscode", "vendor"]
 markdown: kramdown
 
+sass:
+  style: compressed
+

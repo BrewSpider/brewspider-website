@@ -1,0 +1,16 @@
+// Self-hosted fonts (latin subset, variable weight, from Fontsource 5.3.0; SIL Open Font License,
+// see assets/fonts/LICENSE-*.txt). Served from our own domain so visitors' IP addresses are not sent to Google.
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("../fonts/inter-latin-wght-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url("../fonts/space-grotesk-latin-wght-normal.woff2") format("woff2");
+}

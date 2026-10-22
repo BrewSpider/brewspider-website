@@ -1,0 +1,16 @@
+// Plain pages: privacy, contact, 404
+.page {
+  max-width: 760px;
+  padding-top: 72px;
+  padding-bottom: var(--section);
+  h1 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    letter-spacing: -0.015em;
+    margin-bottom: 24px;
+  }
+  h2 { font-size: 22px; margin: 40px 0 12px; }
+  p, ul { margin: 0 0 16px; color: var(--text-muted); }
+  .lead { font-size: 19px; margin-bottom: 32px; }
+}
+
+.page-center { text-align: center; }

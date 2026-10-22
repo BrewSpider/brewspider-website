@@ -2,13 +2,13 @@
 caption: # What displays in the portfolio grid
   title: The BrewSpider App
   subtitle: Rebuilt from the ground up
-  thumbnail: assets/img/product/app2.webp
+  thumbnail: assets/img/product/app.webp
 
 # What displays when the item is clicked
 title: The BrewSpider App
 subtitle: Phone and web, one account
-image: assets/img/product/app2.webp
-alt: BrewSpider app on a phone
+image: assets/img/product/app.webp
+alt: The BrewSpider app: status and control screens
 
 ---
 

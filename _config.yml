@@ -33,8 +33,6 @@ locale: "en-US" # See available languages in _data/sitetext.yml
 analytics:
   cloudflare_token: ""
 
-collections:
-  portfolio:   # the old "Updates" items; no longer on the homepage
 
 # jekyll-seo-tag: title, description, canonical URL, Open Graph, X/Twitter card, structured data
 plugins:

@@ -497,3 +497,46 @@
   a { color: var(--on-dark-link); }
   a:hover { color: #fff; }
 }
+
+// Path to release: steps on a line, each with its status
+.roadmap { border-top: 1px solid var(--line); }
+
+.roadmap-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px 24px;
+  @media (max-width: 760px) { grid-template-columns: 1fr; gap: 32px; }
+}
+
+.roadmap-step {
+  position: relative;
+  padding-top: 24px;
+  border-top: 3px solid var(--line-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  h3 { font-size: 19px; line-height: 1.25; }
+  p { font-size: 15px; color: var(--text-muted); }
+  &.is-done { border-top-color: var(--ok); }
+  &.is-now { border-top-color: var(--orange); }
+  &.is-next { border-top-style: dashed; }
+}
+
+.roadmap-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  .is-done & { color: var(--ok); }
+  .is-done & .dot { background: var(--ok); }
+  .is-now & { color: var(--button); }
+  .is-now & .dot { background: var(--orange); }
+  .is-next & .dot { background: transparent; border: 2px solid var(--line-strong); }
+}

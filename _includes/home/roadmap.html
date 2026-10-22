@@ -1,0 +1,19 @@
+{%- assign roadmap = site.data.sitetext[site.locale].roadmap -%}
+<section class="roadmap" id="roadmap" aria-labelledby="roadmap-title" data-animate>
+  <div class="section wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ roadmap.eyebrow }}</p>
+      <h2 class="title" id="roadmap-title">{{ roadmap.title }}</h2>
+      <p class="lead">{{ roadmap.text }}</p>
+    </div>
+    <ol class="roadmap-steps">
+      {%- for step in roadmap.steps %}
+      <li class="roadmap-step is-{{ step.status }}">
+        <span class="roadmap-status">{% if step.status == "now" %}<span class="dot pulse"></span>{% else %}<span class="dot"></span>{% endif %}{{ roadmap.labels[step.status] }}</span>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>

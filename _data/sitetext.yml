@@ -156,6 +156,35 @@ en: &DEFAULT_EN
         role: "Brewmaster, keeps it practical"
         image: assets/img/team/2.jpg
 
+  # Path to release: no dates (no launch date anywhere). status: done, now or next.
+  roadmap:
+    eyebrow: "Path to release"
+    title: "Where BrewSpider is now."
+    text: "No dates yet, just the order we are working in. Sign up below to hear when it moves."
+    labels:
+      done: "Done"
+      now: "In progress"
+      next: "Next"
+    steps:
+      - status: done
+        title: "Working prototype"
+        text: "Temperature and pressure control, tested in a real fermentation with a brewer."
+      - status: done
+        title: "App for Android and the web"
+        text: "Live readings, batches, manual mode, calibration and updates over the air."
+      - status: done
+        title: "Brewing apps"
+        text: "Readings sent to Brewfather, Brewer's Friend, Grainfather or any webhook."
+      - status: now
+        title: "Production hardware"
+        text: "The circuit board we will build BrewSpider on, designed for manufacturing."
+      - status: next
+        title: "Safety testing and CE marking"
+        text: "Checked against the EU rules before anything is sold."
+      - status: next
+        title: "Pre-orders open"
+        text: "Everyone on the launch list hears first."
+
   faq:
     title: "Questions brewers ask"
     items:

@@ -1,0 +1,18 @@
+{%- assign app = site.data.sitetext[site.locale].app -%}
+<section class="app" id="app">
+  <div class="app-inner section wrap">
+    <div class="phone">
+      <div><img src="{{ app.image | relative_url }}" alt="{{ app.alt }}" width="{{ app.image_width }}" height="{{ app.image_height }}" loading="lazy"></div>
+    </div>
+    <div class="app-text">
+      <p class="eyebrow">{{ app.eyebrow }}</p>
+      <h2 class="title">{{ app.title }}</h2>
+      <p class="lead">{{ app.text }}</p>
+      <dl class="app-points">
+        {%- for p in app.points %}
+        <div><dt>{{ p.title }}</dt><dd>{{ p.text }}</dd></div>
+        {%- endfor %}
+      </dl>
+    </div>
+  </div>
+</section>

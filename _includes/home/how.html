@@ -1,0 +1,22 @@
+{%- assign how = site.data.sitetext[site.locale].how -%}
+<section class="how section wrap" id="how" data-animate>
+  <div class="section-head">
+    <p class="eyebrow">{{ how.eyebrow }}</p>
+    <h2 class="title">{{ how.title }}</h2>
+  </div>
+  <ol class="steps">
+    {%- for step in how.steps %}
+    <li>
+      <div class="step-head" aria-hidden="true">
+        <span class="step-number">{{ forloop.index }}</span>
+        <span class="step-icon">{% include glyph.html name=step.icon size=30 color="#B84A00" stroke=1.8 %}{% if step.icon == "qr" %}<span class="scan"></span>{% endif %}</span>
+      </div>
+      <h3>{{ step.title }}</h3>
+      <p>{{ step.text }}</p>
+    </li>
+    {%- endfor %}
+  </ol>
+  {%- if how.more and how.more.url != "" %}
+  <p class="steps-more">{{ how.more.text }} <a href="{{ how.more.url }}">{{ how.more.link }}</a></p>
+  {%- endif %}
+</section>

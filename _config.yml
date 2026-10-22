@@ -19,9 +19,10 @@ tagline    : "Wireless fermentation controller"
 email      : contact@brewspider.com  #this is also the email contact forms will go to
 description: "BrewSpider is a wireless fermentation controller for homebrewers: it holds temperature by switching your heater and fridge through smart plugs, holds pressure with a built-in spunding valve, reads your iSpindel and keeps working offline. Follow every batch in the app, or send it to Brewfather, Brewer's Friend or Grainfather."
 # author: not set, so jekyll-seo-tag adds no Person author or twitter:creator
-brand_logo:     #navbar logo, optional, defaults to site title
-  path: assets/img/logo/logo.svg
-  height: 40 #height in px, defaults to 52px
+brand_logo:     # wordmark in the nav and footer (on dark); width/height are the file's pixels
+  path: assets/img/logo/wordmark.webp
+  width: 326
+  height: 60
 
 lang  : "en"
 locale: "en-US" # See available languages in _data/sitetext.yml
@@ -32,8 +33,6 @@ locale: "en-US" # See available languages in _data/sitetext.yml
 analytics:
   cloudflare_token: ""
 
-collections:
-  portfolio:
 
 # jekyll-seo-tag: title, description, canonical URL, Open Graph, X/Twitter card, structured data
 plugins:
@@ -58,6 +57,10 @@ defaults:
     values:
       image: /assets/img/header-thumbnail.jpg
 
-exclude: ["LICENSE.txt", "README.md", "ToDoList.md", "Gemfile", "Gemfile.lock", "netlify.toml", ".ruby-version", ".vscode", "vendor"]
+exclude: ["LICENSE.txt", "README.md", "ToDoList.md", "Gemfile", "Gemfile.lock", "netlify.toml", ".ruby-version", ".vscode", "vendor", "*.csv"]
 markdown: kramdown
+
+sass:
+  style: compressed
+  sourcemap: never
 

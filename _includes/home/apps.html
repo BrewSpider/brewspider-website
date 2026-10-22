@@ -1,0 +1,27 @@
+{%- assign apps = site.data.sitetext[site.locale].apps -%}
+<section class="apps" aria-labelledby="apps-title">
+  <div class="apps-inner section wrap">
+    <div class="apps-text">
+      <h2 class="title" id="apps-title">{{ apps.title }}</h2>
+      <p class="lead">{{ apps.text }}</p>
+      <p><a class="apps-more" href="{{ apps.more_url | relative_url }}">{{ apps.more }}</a></p>
+    </div>
+    <ul class="apps-list">
+      {%- for a in apps.list %}
+      <li>
+        <a class="apps-card card" href="{{ a.url | relative_url }}"{% if a.url contains "://" %} rel="noopener"{% endif %}>
+          <span class="apps-logo">
+            {%- if a.logo -%}
+            <img src="{{ a.logo | relative_url }}" alt="{% unless a.show_name %}{{ a.name }}{% endunless %}" width="{{ a.logo_width }}" height="{{ a.logo_height }}" loading="lazy">
+            {%- else -%}
+            {% include glyph.html name=a.icon size=26 color="#B84A00" %}
+            {%- endif -%}
+            {%- if a.show_name %}<strong>{{ a.name }}</strong>{% endif -%}
+          </span>
+          <span class="apps-rate">{{ a.rate }}</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

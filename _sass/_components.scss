@@ -1,0 +1,94 @@
+// Buttons, forms and cards shared by the homepage and the plain pages
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: var(--pill);
+  background: var(--button);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover { background: var(--button-hover); color: #fff; }
+  &:disabled { opacity: .6; cursor: progress; }
+}
+
+.button-lg {
+  min-height: 50px;
+  padding: 0 24px;
+  font-size: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.dot {
+  display: block;
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.dot-ok { width: 7px; height: 7px; background: var(--ok); }
+
+// Launch-list form (hero and bottom band, both on dark)
+.signup-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 30rem;
+  width: 100%;
+  input[type="email"] {
+    flex: 1 1 220px;
+    min-width: 0;
+    min-height: 50px;
+    padding: 0 18px;
+    border-radius: var(--pill);
+    border: 1px solid rgba(255, 204, 170, .35);
+    background: rgba(255, 255, 255, .06);
+    color: var(--on-dark);
+    font: inherit;
+    font-size: 16px;
+    &::placeholder { color: var(--on-dark-soft); opacity: 1; }
+  }
+}
+
+.form-status {
+  flex-basis: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  &.is-ok { color: #9FE0B0; }
+  &.is-error { color: #FFB49A; }
+}
+
+.honeypot { display: none; }
+
+// Contact form (light background)
+.contact-form {
+  display: grid;
+  gap: 20px;
+  label { display: block; margin-bottom: 6px; font-weight: 600; }
+  .optional { font-weight: 400; color: var(--text-soft); }
+  input, textarea {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 16px;
+    border: 1px solid var(--line-strong);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--text);
+    font: inherit;
+    font-size: 16px;
+  }
+  textarea { min-height: 180px; resize: vertical; }
+  .button { justify-self: start; }
+  .form-status.is-ok { color: var(--ok); }
+  .form-status.is-error { color: #A12A00; }
+}

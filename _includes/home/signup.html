@@ -1,0 +1,9 @@
+{%- assign signup = site.data.sitetext[site.locale].signup -%}
+<section class="signup on-dark" id="signup" aria-labelledby="signup-title">
+  <div class="signup-inner wrap">
+    <h2 id="signup-title">{{ signup.title }}</h2>
+    <p>{{ signup.text }}</p>
+    {% include launch-form.html id="signup" %}
+    <p class="signup-more">{{ signup.more }} <a href="{{ signup.more_url | relative_url }}">{{ signup.more_link }}</a></p>
+  </div>
+</section>

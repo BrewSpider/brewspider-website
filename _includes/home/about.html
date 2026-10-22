@@ -1,0 +1,16 @@
+{%- assign about = site.data.sitetext[site.locale].about -%}
+<section class="about section wrap" aria-labelledby="about-title">
+  <div class="about-text">
+    <p class="eyebrow">{{ about.eyebrow }}</p>
+    <h2 class="title" id="about-title">{{ about.title }}</h2>
+    <p class="lead">{{ about.text }}</p>
+  </div>
+  <ul class="team">
+    {%- for person in about.people %}
+    <li>
+      <img src="{{ person.image | relative_url }}" alt="" width="144" height="144" loading="lazy">
+      <div><strong>{{ person.name }}</strong><span>{{ person.role }}</span></div>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

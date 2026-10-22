@@ -1,0 +1,47 @@
+{%- assign hero = site.data.sitetext[site.locale].hero -%}
+<section class="hero on-dark" data-animate>
+  <picture class="hero-banner">
+    <source media="(max-width: 760px)" srcset="{{ hero.banner_mobile | relative_url }}" width="864" height="896">
+    <img src="{{ hero.banner | relative_url }}" alt="" width="1344" height="896">
+  </picture>
+  <div class="hero-inner wrap">
+    <div class="hero-text">
+      <p class="hero-badge"><span class="dot pulse"></span>{{ hero.badge }}</p>
+      <h1>{{ hero.title }}</h1>
+      <p class="hero-slogan">{{ hero.slogan }}</p>
+      <p class="hero-lead">{{ hero.text }}</p>
+      {% include launch-form.html id="hero" %}
+      <p class="hero-note">
+        <span>{{ hero.note }}</span>
+        <a href="{{ hero.more.url }}">{{ hero.more.title }}</a>
+      </p>
+    </div>
+
+    <div class="hero-visual">
+      <img class="float" src="{{ hero.image | relative_url }}" alt="{{ hero.alt }}" width="{{ hero.image_width }}" height="{{ hero.image_height }}" fetchpriority="high">
+      <div class="live-card" role="img" aria-label="{{ hero.card.label }}: {% for r in hero.card.readings %}{{ r.value }} {{ r.label }}{% unless forloop.last %}, {% endunless %}{% endfor %}">
+        <div class="live-card-head" aria-hidden="true">
+          <span>{{ hero.card.name }}</span>
+          <span class="live-status"><span class="dot dot-ok pulse"></span>{{ hero.card.status }}</span>
+        </div>
+        <dl class="live-readings" aria-hidden="true">
+          {%- for r in hero.card.readings %}
+          <div><dt>{{ r.label }}</dt><dd>{{ r.value }}</dd></div>
+          {%- endfor %}
+        </dl>
+        <svg viewBox="0 0 220 44" width="100%" height="44" aria-hidden="true">
+          <line x1="0" y1="26" x2="220" y2="26" stroke="#E0980B" stroke-width="1" stroke-dasharray="3 4"/>
+          <path class="draw" d="M0 42 C 30 40, 45 21, 70 21 S 110 28, 130 25 S 170 27, 190 26 S 210 26, 220 26" fill="none" stroke="#D45500" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="highlights" aria-label="{{ site.data.sitetext[site.locale].highlights.label }}">
+  <ul class="wrap">
+    {%- for item in site.data.sitetext[site.locale].highlights.list %}
+    <li>{% include glyph.html name=item.icon size=18 color="#E0980B" %}{{ item.text }}</li>
+    {%- endfor %}
+  </ul>
+</section>

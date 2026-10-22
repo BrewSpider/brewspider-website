@@ -1,0 +1,18 @@
+{%- assign nav = site.data.navigation[site.locale] -%}
+<a class="skip-link" href="#main">{{ nav.skip }}</a>
+<header class="site-header on-dark">
+  <nav class="nav wrap" aria-label="{{ nav.label }}">
+    <a class="nav-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+      <img src="{{ site.brand_logo.path | relative_url }}" alt="{{ site.title }}" width="{{ site.brand_logo.width }}" height="{{ site.brand_logo.height }}">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav-toggle-icon" aria-hidden="true"></span>{{ nav.menu }}
+    </button>
+    <div class="nav-menu" id="nav-menu">
+      {%- for link in nav.links %}
+      <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+      {%- endfor %}
+      <a class="button" href="{{ nav.cta.url | relative_url }}">{{ nav.cta.title }}</a>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,22 @@
+{%- assign roadmap = site.data.sitetext[site.locale].roadmap -%}
+<section class="roadmap" id="roadmap" aria-labelledby="roadmap-title" data-animate>
+  <div class="section wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ roadmap.eyebrow }}</p>
+      <h2 class="title" id="roadmap-title">{{ roadmap.title }}</h2>
+      <p class="lead">{{ roadmap.text }}</p>
+    </div>
+    <ol class="timeline">
+      {%- for step in roadmap.steps %}
+      <li class="timeline-step is-{{ step.status }}">
+        <span class="timeline-node" aria-hidden="true">{% if step.status == "now" %}<span class="timeline-ring pulse"></span>{% endif %}{% include glyph.html name=step.icon size=22 stroke=1.8 %}</span>
+        <div class="timeline-card card">
+          <span class="timeline-status">{{ roadmap.labels[step.status] }}</span>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>

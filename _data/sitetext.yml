@@ -1,177 +1,336 @@
---- # -----------------
+# All the site's wording, so text edits don't touch the templates.
+# Use: {{ site.data.sitetext[site.locale].<section>.<key> }}
+# Icons (the "icon" keys) are named in _data/glyphs.yml.
 #
-# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
-#
-# Configuration: Add to _config.yml
-# locale: "en-US"  [YOUR PREFERRED LOCALE]
-#
-# How to use:
-# {{ site.data.ui-text[site.locale].<var_name> | default: 'text' }}
+# No price and no launch date anywhere. Facts that are not settled yet are commented
+# out (search for "TO CONFIRM"); don't publish them with placeholders in brackets.
 
 # English (default)
 en: &DEFAULT_EN
-  header:
-    title: Precision Brewing Simplified
-    text: Click. Brew. Cheers!
+  hero:
+    badge: "Wireless fermentation controller"
+    title: "Temperature and pressure, held steady for every batch."
+    slogan: "Click. Brew. Cheers!"
+    text: "BrewSpider switches your heater and fridge through wireless smart plugs, holds pressure with a built-in spunding valve, reads floating sensors like the iSpindel, and keeps working when the Wi-Fi doesn't."
+    note: "One email when pre-orders open. No spam."
+    more:
+      title: "See how it works"
+      url: "#how"
     image: assets/img/product/product.webp
-    alt: "BrewSpider fermentation controller"
-    button: Learn More
-    buttonlink: "#features"
+    image_width: 510
+    image_height: 383
+    alt: "The BrewSpider controller, an orange enclosure with a rounded corner"
+    # Background photo (the original site banner), dimmed behind the hero
+    banner: assets/img/hero/banner.webp
+    banner_mobile: assets/img/hero/banner-mobile.webp
+    card:
+      name: "Fermenter 1"
+      status: "Live"
+      label: "Example readings"
+      readings:
+        - value: "12.3°"
+          label: "target 12.0"
+        - value: "0.99"
+          label: "bar"
+        - value: "1.042"
+          label: "gravity"
+
+  # Launch-list form (hero and bottom band). Netlify form name: launch-list.
+  launch:
+    label: "Email address"
+    placeholder: "you@example.com"
+    button: "Get launch updates"
+    sent: "Thanks! You're on the list. We'll email you when pre-orders open."
+    failed: "Sorry, that didn't work. Please try again, or email contact@brewspider.com."
+
+  highlights:
+    label: "Highlights"
+    list:
+      - icon: shield
+        text: "Control runs on the device"
+      - icon: wireless
+        text: "Wireless plugs, fewer cables"
+      - icon: flask
+        text: "Floating sensors like the iSpindel"
+      - icon: arrow
+        text: "Sends to Brewfather, Brewer's Friend, Grainfather"
+      - icon: refresh
+        text: "Updates over the air"
+
+  system:
+    eyebrow: "One box for the whole fermentation"
+    title: "Sensors in, heater, fridge and valve out."
+    text: "BrewSpider reads the temperature and pressure in your fermenter and decides, on the device itself, when to heat, cool or vent. Only the parts on the fermenter have cables, and they run on 12 V. The heater, the fridge and the floating sensor connect without wires."
+    wired: "Wired"
+    wireless: "Wireless"
+    # Numbers match the markers on the photo; x/y = marker position on the photo in %.
+    inputs_label: "What BrewSpider reads"
+    inputs:
+      - icon: thermometer
+        title: "Temperature probe"
+        text: "In the thermowell or taped to the fermenter"
+        link: wired
+        x: 57
+        y: 66
+      - icon: gauge
+        title: "Pressure sensor"
+        text: "On the gas side of the lid"
+        link: wired
+        x: 44
+        y: 73
+      - icon: hydrometer
+        title: "Floating sensor (optional)"
+        text: "Like the iSpindel: gravity, temperature, battery"
+        link: wireless
+        x: 26
+        y: 63
+    image: assets/img/product/device-with-ispindel.webp
+    image_width: 480
+    image_height: 480
+    alt: "BrewSpider controller with its temperature probe, pressure sensor, vent valve and an iSpindel, numbered as in the list"
+    caption: "The BrewSpider controller. Decides locally, works offline."
+    outputs_label: "What BrewSpider switches"
+    outputs:
+      - icon: valve
+        title: "Vent valve"
+        text: "Holds pressure with short pulses, closed without power"
+        link: wired
+        x: 87
+        y: 76
+      - plug: heat
+        title: "Heating smart plug"
+        text: "Your heater plugs into it"
+        link: wireless
+      - plug: cool
+        title: "Cooling smart plug"
+        text: "Your fridge plugs into it, compressor rest built in"
+        link: wireless
 
   features:
-    title: "Features"
-    text: "Temperature and pressure under control, all through fermentation"
-    section: features
-    list:
-      - title: "Temperature Control"
-        desc: "Holds your fermentation temperature by switching both a heater and a fridge through smart plugs, with a rest period that protects the fridge compressor. Choose the wired probe or an iSpindel as the sensor; the other one is the backup."
-        icon: fas fa-temperature-high #icons in _data/icons.yml
-      - title: "Pressure Control"
-        desc: "A built-in spunding valve: set a target pressure and BrewSpider vents in short pulses to hold it, for naturally carbonated beer straight from the fermenter. If pressure ever nears your vessel's maximum, it vents regardless."
-        icon: fas fa-gauge-high
-      - title: "Control from Anywhere"
-        desc: "Live readings, targets and a zoomable trend chart in the BrewSpider app on your phone, or in any web browser. Every fermentation is saved as a batch you can look back on or export as CSV, and the readings can go to Brewfather, Brewer's Friend or Grainfather too."
-        icon: fas fa-mobile-screen-button
-      - title: "Connects to [***iSpindel***](https://ispindel.de)"
-        desc: "Your [**iSpindel**](https://ispindel.de) wireless hydrometer connects straight to BrewSpider, so you follow gravity, temperature and battery in the app, without extra hardware."
-        icon: fas fa-vial
-      - title: "Keeps Working Offline"
-        desc: "All control runs on the device itself. If your Wi-Fi or internet drops, BrewSpider keeps regulating, stores its readings and sends them once it is back online."
-        icon: fas fa-shield-halved
-      - title: "Easy Setup"
-        desc: "Scan the QR code on the label with the app, hold the button for 5 seconds, and the app connects BrewSpider to your Wi-Fi over Bluetooth. Updates arrive over the air."
-        icon: fas fa-qrcode
+    - visual: temperature
+      title: "Temperature control"
+      text: "Heats and cools to your target through two wireless smart plugs, with a rest period that protects the fridge compressor. Choose the wired probe or a floating sensor like the iSpindel; the other one is the backup."
+      chart_label: "target"
+    - visual: pressure
+      title: "Pressure control"
+      text: "A built-in spunding valve: set a target and BrewSpider vents in short pulses to hold it, for naturally carbonated beer straight from the fermenter. Near your vessel's maximum it vents regardless."
+    - visual: offline
+      title: "Keeps working offline"
+      text: "All control runs on the device. If your Wi-Fi or internet drops, BrewSpider keeps regulating, stores its readings and sends them once it is back online."
+      chip: "Still regulating"
+      chip_note: "Readings saved, sent later"
 
-  portfolio:
-    title: "Updates"
-    text: ""
-    section: portfolio
-    closebutton: "Close"
+  app:
+    eyebrow: "The BrewSpider app"
+    title: "Every batch, live on your phone."
+    text: "Live readings, targets and a zoomable trend chart on Android, or in any web browser. iOS is on the way."
+    image: assets/img/product/app-status-2.webp  # new name: images are cached a week, a changed file needs a new name
+    image_width: 600
+    image_height: 1298
+    alt: "BrewSpider app status screen: heater off, cooling, valve closed, temperature 13.0 and 12.3 °C, pressure 0.99 bar, gravity 1.042"
+    points:
+      - title: "Batches you can look back on"
+        text: "Each fermentation keeps its readings and events. Export any batch as CSV."
+      - title: "Manual mode"
+        text: "Take over the heater, fridge and valve by hand when you need to."
+      - title: "Your own gauge as reference"
+        text: "Calibrate the pressure sensor against the gauge you trust."
+      - title: "Safe updates"
+        text: "New firmware installs from the app, never mid-batch unless you say so."
 
-  timeline:
-    title: "How it works"
-    text: "From unboxing to your first batch"
-    section: timeline
-    # left is the default
-    # start_align: "left"
-    events:
-      - title: "Set up your fermenter"
-        year: ""
-        desc: "Place **BrewSpider** next to your fermenter. Fit the temperature probe, the pressure sensor and the valve to the fermenter, and plug your heater and fridge into smart plugs that BrewSpider switches on and off."
-        image: assets/img/timeline/brewery_setup.webp
-        alt:
-      - title: "Connect it to Wi-Fi"
-        year: ""
-        desc: "Get the BrewSpider app, choose **Pair with QR code** and scan the label. Hold the button for 5 seconds and pick your Wi-Fi; the app does the rest over Bluetooth. No phone at hand? The device also has its own Wi-Fi setup page."
-        image: assets/img/timeline/wifi.webp
-        alt:
-      - title: "Connect your iSpindel"
-        year: ""
-        desc: 'Optional. In the **iSpindel** setup page choose the Wi-Fi network **BrewSpider-XXXX** (password on the label), Service Type **HTTP**, Server Address **192.168.4.1**, Port **80**, Path **/ispindel**. Then add it under Wireless sensors in the app.'
-        image: assets/img/timeline/ispindel.webp
-        alt:
+  how:
+    eyebrow: "How it works"
+    title: "From unboxing to your first batch"
+    steps:
+      - title: "Fit it to your fermenter"
+        icon: wrench
+        text: "Fit the temperature probe, pressure sensor and valve. Plug your heater and fridge into the wireless smart plugs."
+      - title: "Scan the label"
+        icon: qr
+        text: "In the app, choose Pair with QR code, hold the button for 5 seconds and pick your Wi-Fi. The app does the rest over Bluetooth."
       - title: "Set your targets"
-        year: ""
-        desc: "Enter the temperature and pressure you want. Brewing starts as a new batch, named however you like."
-        image: assets/img/timeline/phone_app.webp
-        alt:
-      - title: "Monitor & adjust"
-        year: ""
-        desc: "Follow temperature, pressure and gravity live, from anywhere. Change targets on the fly, or take over the heater, fridge and valve by hand in manual mode."
-        image: assets/img/timeline/monitor.webp
-        alt:
-      - title: "Keep your data"
-        year: ""
-        desc: "Each batch keeps its readings and events. Look back at its chart, or export to CSV. Already plan your brews in <a target='_blank' rel='noopener' href='https://brewfather.app/?via=494298'><img src='assets/img/clients/brewfather.png' height='35' alt='Brewfather'></a>, **Brewer's Friend** or **Grainfather**? Paste its link under **Brewing apps** in the app, and BrewSpider sends your readings there every 15 minutes. Any other app with a webhook (Home Assistant, Node-RED, Google Sheets) works too."
-        image: assets/img/timeline/integrate.webp
-        alt:
-        # you can enforce the alignment
-        # align: right
-    end: "<br> Cheers!"
+        icon: sliders
+        text: "Enter the temperature and pressure you want. Brewing starts as a new batch, named however you like."
+    # TO CONFIRM: the manual's public URL. Shown under the steps once set.
+    # more:
+    #   text: "Adding an iSpindel or a brewing app?"
+    #   link: "Step-by-step in the manual"
+    #   url: ""
+
+  apps:
+    title: "Already plan your brews somewhere else?"
+    text: "Connect your brewing app in the BrewSpider app: copy the link your brewing app gives you and paste it in. From then on our server sends it your readings (temperature, pressure, gravity and iSpindel battery) on its own, so your brew log fills itself."
+    more: "How to connect each app"
+    more_url: /brewing-apps/
+    list:
+      - name: "Brewfather"
+        url: https://brewfather.app/?via=494298
+        logo: assets/img/clients/brewfather.webp
+        logo_width: 199
+        logo_height: 50
+        show_name: false
+        rate: "Every 15 minutes, the most Brewfather accepts"
+      - name: "Brewer's Friend"
+        url: https://www.brewersfriend.com/
+        logo: assets/img/clients/brewersfriend.webp
+        logo_width: 54
+        logo_height: 56
+        show_name: true
+        rate: "Every 15 minutes, the most Brewer's Friend accepts"
+      - name: "Grainfather"
+        url: https://grainfather.com/
+        logo: assets/img/clients/grainfather.webp
+        logo_width: 123
+        logo_height: 56
+        show_name: false
+        rate: "Every 15 minutes"
+      - name: "Webhook"
+        url: /brewing-apps/#webhook
+        icon: arrow
+        show_name: true
+        rate: "Any other app (Home Assistant, Node-RED, Google Sheets): every 1 to 60 minutes, you choose"
 
   about:
-    title: "About Us"
-    text: "Our story"
-    body: "BrewSpider is a small controller that handles both temperature and pressure during fermentation, made for homebrewers and small breweries. We design the electronics, the firmware and the app ourselves, with safety first: the device keeps your brew under control even when the internet doesn't."
-    section: about
-
-  team:
-    title: "Our Team"
-    text: "The people behind BrewSpider"
-    subtext: Nader builds the hardware, firmware and app; Roman brings the brewing experience and keeps an eye on what brewers actually need.
-    section: team
+    eyebrow: "Who makes it"
+    title: "Built by engineers and brewers."
+    text: "We design the electronics, the firmware and the app ourselves, with safety first: the device keeps your brew under control even when the internet doesn't."
     people:
       - name: "Nader A."
-        role: "Technical Innovator & Programmer"
+        role: "Hardware, firmware and app"
         image: assets/img/team/1.jpg
-        social:
-          - url: https://github.com/alghazu
-            icon: fab fa-github
-            label: GitHub
-          - url: https://www.linkedin.com/in/alghazu
-            icon: fab fa-linkedin-in
-            label: LinkedIn
-          - url: mailto:nader@brewspider.com
-            icon: fas fa-envelope
-            label: Email
       - name: "Roman D."
-        role: "Brewmaster & Market Analyst"
+        role: "Engineer and brewmaster, keeps it practical"
         image: assets/img/team/2.jpg
-        social:
-          - url: https://www.facebook.com/roman.demchenko.9
-            icon: fab fa-facebook-f
-            label: Facebook
-          - url: https://www.linkedin.com/in/demchenkoroman/
-            icon: fab fa-linkedin-in
-            label: LinkedIn
-          - url: mailto:roman@brewspider.com
-            icon: fas fa-envelope
-            label: Email
 
+  # Path to release: no dates (no launch date anywhere). status: done, now, next or later.
+  roadmap:
+    eyebrow: "Path to release"
+    title: "Where BrewSpider is now."
+    text: "No dates yet, just the order we are working in. Sign up below to hear when it moves."
+    labels:
+      done: "Done"
+      now: "In progress"
+      next: "Next"
+      later: "Later"
+    steps:
+      - status: done
+        icon: wrench
+        title: "Working prototype"
+        text: "Temperature and pressure control, tested in a real fermentation with a brewer."
+      - status: done
+        icon: phone
+        title: "App for Android and the web"
+        text: "Live readings, batches, manual mode, calibration and updates over the air."
+      - status: done
+        icon: arrow
+        title: "Brewing apps"
+        text: "Readings sent to Brewfather, Brewer's Friend, Grainfather or any webhook."
+      - status: now
+        icon: chip
+        title: "Production hardware"
+        text: "The circuit board we will build BrewSpider on, designed for manufacturing."
+      - status: next
+        icon: shield
+        title: "Safety testing and CE marking"
+        text: "Checked against the EU rules before anything is sold."
+      - status: next
+        icon: cart
+        title: "Pre-orders open"
+        text: "Everyone on the launch list hears first."
+      - status: later
+        icon: phone
+        title: "iOS app"
+        text: "The same app on iPhone."
+      - status: later
+        icon: hydrometer
+        title: "More sensors"
+        text: "More floating sensors and other parts to add to your BrewSpider."
+      - status: later
+        icon: globe
+        title: "Selling worldwide"
+        text: "Opening BrewSpider to brewers everywhere."
+
+  faq:
+    title: "Questions brewers ask"
+    plug_heat: "Heating plug"
+    plug_cool: "Cooling plug"
+    items:
+      - q: "What happens if I lose the internet connection?"
+        a: "BrewSpider keeps regulating temperature and pressure with your last targets, because control runs on the device itself. It stores its readings and sends them once the connection is back (about 12 hours of readings at normal rates). Until then you can't follow it or change targets in the app."
+        open: true
+      - q: "What is wired and what is wireless?"
+        a: "Only the parts on the fermenter are wired: the temperature probe, the pressure sensor and the vent valve, all on 12 V. The heater and the fridge plug into two smart plugs that BrewSpider switches without cables, and a floating sensor like the iSpindel sends its readings over Wi-Fi. No mains cable goes to the controller."
+      - q: "How do the heater and the fridge get switched?"
+        a: "Plug the heater into the heating smart plug and the fridge into the cooling one. BrewSpider decides when each should be on and switches its plug, and gives the fridge a rest between starts to protect the compressor. If you only heat or only cool, use just one plug."
+        figure: plugs
+      # TO CONFIRM: which smart plugs are supported or included.
+      # - q: "Which smart plugs work?"
+      #   a: "..."
+      - q: "What happens if a sensor or the power drops?"
+        a: "If the floating sensor stops reporting, it switches to the wired probe. If the pressure sensor fails, it closes the valve and raises an alarm. In a power cut everything switches off and the valve stays closed; when power returns it carries on with your saved targets."
+      - q: "Which fermenters can use pressure control?"
+        a: "A fermenter rated for the pressure you want, with a mechanical pressure relief valve and a free gas connection. You enter your vessel's maximum pressure (up to 2.4 bar), and BrewSpider vents before it gets there."
+      # TO CONFIRM: the valve's fitting size; then add it to the answer above.
+      - q: "Do I need a floating sensor like the iSpindel?"
+        a: "No. The wired probe is enough for temperature control. A floating sensor adds gravity and battery readings, and can be the main temperature sensor, with the wired probe as its backup."
+      - q: "What do I need at home?"
+        a: "A 2.4 GHz Wi-Fi network, and an Android phone or any web browser for the app. The iPhone app is on the way."
+      - q: "When can I buy one?"
+        a: "We are preparing pre-orders. Leave your email below and you will be the first to know."
+
+  signup:
+    title: "Be first in line."
+    text: "One email when pre-orders open, and the occasional build update. Unsubscribe any time."
+    more: "Questions?"
+    more_link: "Send us a message"
+    more_url: /contact/
+
+  # Contact page (/contact/). Netlify form name: contact-brewspider (don't rename it:
+  # Netlify keeps the submissions under that name).
   contact:
-    title: "Contact Us"
+    title: "Contact us"
     text: "Questions, ideas, or want to hear when BrewSpider is available? Send us a message."
-    section: contact
-    name: "Name*"
-    name-label: "Name (required)"
-    name-validation: "Please enter your name."
-    email: "Email*"
-    email-label: "Email (required)"
-    email-invalid: "Please enter a valid email address."
-    email-validation: "Please enter your email address."
-    phone: "Phone number (optional)"
-    phone-label: "Phone number (optional)"
-    message: "Message*"
-    message-label: "Message (required)"
-    message-validation: "Please enter a message."
+    name: "Name"
+    email: "Email"
+    phone: "Phone number"
+    optional: "(optional)"
+    message: "Message"
     subject: "Contact Form Submission"
-    submit: "Send Message"
-    sent: "Your message has been sent."
-    failed: "Sorry, your message could not be sent. Please try again later or email us."
+    submit: "Send message"
+    sent: "Your message has been sent. We'll get back to you soon."
+    failed: "Sorry, your message could not be sent. Please try again later or email contact@brewspider.com."
 
-  clients:
-    section: clients
-    max-height: 30px
-    horizontal-scrolling: "no" #"yes/no"; a single logo doesn't need to scroll
-    list:
-      - title: "BrewFather"
-        url: https://brewfather.app/?via=494298
-        logo: assets/img/clients/brewfather.png
+  not_found:
+    title: "Page not found"
+    text: "The page you were looking for isn't here."
+    link: "Back to the home page"
 
   footer:
-    legal: "Privacy Policy"
+    tagline: "Click. Brew. Cheers!"
+    links:
+      # TO CONFIRM: the manual's public URL.
+      # - title: "Manual"
+      #   url: ""
+      - title: "Contact"
+        url: /contact/
+      - title: "Privacy"
+        url: /legal
+      - title: "Brewing apps"
+        url: /brewing-apps/
     social:
-      - url: https://twitter.com/Brew_Spider
-        icon: "fab fa-x-twitter"
-        label: "BrewSpider on X"
-      - url: https://www.facebook.com/BrewSpider
-        icon: "fab fa-facebook-f"
-        label: "BrewSpider on Facebook"
-      - url: https://www.linkedin.com/company/brewspider/
-        icon: "fab fa-linkedin-in"
-        label: "BrewSpider on LinkedIn"
-      - url: https://www.instagram.com/brewspider/
-        icon: "fab fa-instagram"
-        label: "BrewSpider on Instagram"
+      - title: "BrewSpider on Instagram"
+        icon: instagram
+        url: https://www.instagram.com/brewspider/
+      - title: "BrewSpider on Facebook"
+        icon: facebook-f
+        url: https://www.facebook.com/BrewSpider
+      - title: "BrewSpider on LinkedIn"
+        icon: linkedin-in
+        url: https://www.linkedin.com/company/brewspider/
+      - title: "BrewSpider on X (Twitter)"
+        icon: x-twitter
+        url: https://twitter.com/Brew_Spider
+    # TO CONFIRM: company name and organisation number, once registered.
+    # company: ""
 en-US:
   <<: *DEFAULT_EN

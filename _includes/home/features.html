@@ -1,0 +1,34 @@
+<section class="features section wrap" data-animate>
+  <div class="feature-grid">
+    {%- for f in site.data.sitetext[site.locale].features %}
+    <article class="feature card">
+      {%- case f.visual -%}
+      {%- when "temperature" %}
+      <div class="feature-visual" aria-hidden="true">
+        <svg class="chart" viewBox="0 0 300 120" preserveAspectRatio="none">
+          <line x1="12" y1="62" x2="288" y2="62" stroke="#E0980B" stroke-width="1.5" stroke-dasharray="4 5"/>
+          <text x="250" y="78" font-size="11" fill="#8A5A3C">{{ f.chart_label }}</text>
+          <path class="draw" d="M12 108 C 60 104, 80 44, 120 50 S 170 66, 200 61 S 260 62, 288 62" fill="none" stroke="#D45500" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      {%- when "pressure" %}
+      <div class="feature-visual feature-visual-valve" aria-hidden="true">
+        <span class="puff vent"></span>
+        <span class="puff vent vent-late"></span>
+        {% include glyph.html name="valve" size=72 color="#B84A00" stroke=1.5 %}
+      </div>
+      {%- when "offline" %}
+      <div class="feature-visual" aria-hidden="true">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#8A5A3C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/><path d="M3 3l18 18" stroke="#D45500"/></svg>
+        <div class="offline-status">
+          <span class="chip"><span class="dot dot-ok pulse"></span>{{ f.chip }}</span>
+          <span>{{ f.chip_note }}</span>
+        </div>
+      </div>
+      {%- endcase %}
+      <h3>{{ f.title }}</h3>
+      <p>{{ f.text }}</p>
+    </article>
+    {%- endfor %}
+  </div>
+</section>

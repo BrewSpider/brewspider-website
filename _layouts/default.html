@@ -1,36 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}">
-
   {% include head.html %}
-
-  <body id="page-top">
-
+  <body>
+    {% include header.html %}
+    <main id="main">
       {{ content }}
+    </main>
+    {% include footer.html %}
 
-	  {% include footer.html %}
+    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
 
-	  <!-- Bootstrap core JavaScript -->
-	  <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
-	  <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
-
-	  <!-- Plugin JavaScript -->
-	  <script src="{{ '/assets/js/jquery.easing.min.js' | relative_url }}"></script>
-
-	  <!-- Contact form JavaScript -->
-	  {% if page.layout == "home" %}
-	  <script src="{{ '/assets/js/contact_me.js' | relative_url }}"></script>
-	  {% endif %}
-
-	  <!-- Custom scripts for this template -->
-	  <script src="{{ '/assets/js/agency.min.js' | relative_url }}"></script>
-	  {% if page.layout == "home" and site.data.sitetext[site.locale].clients.horizontal-scrolling == "yes" %}
-	  <script src="{{ '/assets/js/clients.js' | relative_url }}"></script>
-	  {% endif %}
-
-	  {% if site.analytics.cloudflare_token and site.analytics.cloudflare_token != "" %}
-	  <!-- Cloudflare Web Analytics: cookie-free, no personal data stored -->
-	  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analytics.cloudflare_token }}"}'></script>
-	  {% endif %}
-
+    {% if site.analytics.cloudflare_token and site.analytics.cloudflare_token != "" %}
+    <!-- Cloudflare Web Analytics: cookie-free, no personal data stored -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analytics.cloudflare_token }}"}'></script>
+    {% endif %}
   </body>
 </html>
